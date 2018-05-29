@@ -1,49 +1,39 @@
-<div class="wp">
-    <img src="img/index/logo1.png">
-    <div class="up">
-        <a href="index.html">首頁</a><span>/</span>
-        <a href="web.html">網站</a><span>/</span>
-        <a href="psai.html">平面</a><span>/</span>
-        <a href="hm.html">卡片</a><span>/</span>
-        <a href="index.html#c">聯絡我</a>
-    </div>
-    <nav>
-        <span></span>
-        <span></span>
-        <span></span>
-    </nav>
-     <div class="menu">
-        <a href="index.html">首頁</a>
-        <a href="web.html">網站</a>
-        <a href="psai.html">平面</a>
-        <a href="hm.html">卡片</a>
-        <a href="index.html#c">聯絡我</a>
-    </div>
-</div>
-<h1>期許自己,能夠用不一樣的角度觀察,創造暖心的作品。</h1>
-<div class="bg"></div>
-
-<script>
-/*menu*/
-$(window).resize(function(){
+      <div class="wp">
+       <div id="logo"> FUNTOWER </div>
+       <nav id="navwrapper">
+               <nav></nav>
+               <ul>
+                    <li><a href="dessertIndex.html">關於我們</a></li>
+                    <li><a href="commodity.html">商品介紹</a></li>
+                    <li><a href="sale1.html">活動訊息</a></li>
+                    <li><a href="shop.html">門市據點</a></li>
+                    <li><a href="contact.html">聯繫我們</a></li>
+                </ul> 
+        </nav>
+        <ul>
+            <li><a href="dessertIndex.html">關於我們</a></li>
+            <li><a href="commodity.html">商品介紹</a></li>
+            <li><a href="sale1.html">活動訊息</a></li>
+            <li><a href="shop.html">門市據點</a></li>
+            <li><a href="contact.html">聯繫我們</a></li>
+        </ul>
+        <div class="bg"></div> 
+    </div>  
+    <script>
+        window.addEventListener("load",function() {  
+  setTimeout(function(){
+  window.scrollTo(0, 1); }, 10);
+});
+    $('#navwrapper>nav').click(function(){
+        $('#navwrapper').siblings('ul').fadeToggle();
+        $('header .bg').fadeToggle();
+    });
     var $H=$(window).height();
-    $('header .menu').height($H-80);
-    $('header .bg').height($H);
-    $('header .menu').hide();
-    $('header .bg').hide();
-     $('header nav').removeClass('menuOpen');
-});
-var $H=$(window).height();
-$('header .menu').height($H-80);
-$('header .bg').height($H);
-$('header nav').click(function(){
-    $('header .menu').slideToggle().css('display','flex');
-    $('header .bg').toggle();
-    $('header nav').toggleClass('menuOpen');
-});
+    var $W=$(window).width();
+    $('header .bg').height($H+70);
+    
 $('header .bg').click(function(){
-    $('header .menu').fadeToggle();
-    $('header .bg').toggle();
-    $('header nav').toggleClass('menuOpen'); 
-});
-</script> 
+        $('#navwrapper').siblings('ul').fadeToggle();
+        $('header .bg').hide();
+    });
+</script>
