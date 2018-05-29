@@ -1,24 +1,4 @@
-#tiles {
-	list-style-type: none;
-	position: relative;
-	margin: 0 auto;
-    max-width: 800px;
-    min-height:1000px;
-}
-#tiles li {
-	width:200px;
-	background-color:#fff;
-	border: 1px solid #f2f2f2;
-	cursor: pointer;
-	padding: 4px;
-}
-#tiles li img {
-	display: block;width:100%;
-    border: 1px solid #e0d9d9;
-}
-#tiles li p {
-	color: #666;
-	font-size: 12px;
-	margin: 7px 0 0 7px;
-} 
-    
+#main {max-width:1000px;width:100%;margin:0 auto;}
+.grid{width:100%;overflow:hidden;margin:0 auto;}
+.grid .item {width:200px;background-color:#fff;border: 1px solid #f2f2f2;padding: 4px;overflow:hidden;}
+.grid .item img {display: block;width:100%;border: 1px solid #e0d9d9;}
