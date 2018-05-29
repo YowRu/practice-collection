@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="keywords" content="17988,鄉民財經,財經,台股,股票,期貨,選擇權,海外期貨,金融,賺錢,技術分析,理財,投資,個股,選股,大盤,盤勢" /><meta name="description" content="我們是一個擁有財經知識、專業分析師、影音與軟體的網路學習網站，提供多項線上即時服務，讓使用者自行選擇影音教學、軟體操作或分析師講座，從豐富的線上資料庫，輕鬆入門或進階學習，協助大眾精確而有效率的進修投資理財知識。" />
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/FlexSlider/jquery.flexslider-min.js"></script>
+    <link rel="stylesheet" href="icon/font/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="js/FlexSlider/flexslider.css" type="text/css">
+    <link rel="stylesheet" href="css/1080layout.css" type="text/css">
+    <link rel="stylesheet" href="css/1080index.css" type="text/css">
+    <link rel="stylesheet" href="css/easyselect.css" type="text/css">
+    <title>選股</title>
+</head>
+<body>
+    <header></header>
+    <div id="main">
+       <ul id="breadcrumbs">
+            <li><a href="index.html">首頁</a>></li>
+            <li><a href="easyselect.html" class="current">選股</a></li>
+       </ul>
+       <div class="easyWP">
+           <div class="row1">
+               <h1>選擇條件</h1>
+               <ul class="tabs">
+                    <li class="row3P1">選股大師 ▾
+                        <ul class="row3P2">
+                            <li><a href="#tab1">巴菲特</a></li> 
+                            <li><a href="#tab2">葛拉漢</a></li>
+                            <li><a href="#tab3">漢克莫非</a></li>
+                            <li><a href="#tab4">麥克喜偉</a></li>
+                        </ul>      
+                    </li>
+                    <li class="row3P1">基本面 ▾
+                        <ul class="row3P2 ">
+                            <li><a href="#tab5">股價</a></li>
+                            <li><a href="#tab6">成交量</a></li>
+                            <li><a href="#tab7">收盤價站上/跌破</a></li>
+                            <li><a href="#tab8">收盤連續上漲/下跌</a></li>
+                            <li><a href="#tab9">收盤創新高/創新低</a></li>
+                            <li><a href="#tab10">成交持續擴張/萎縮</a></li>
+                            <li><a href="#tab11">過去價格漲跌幅</a></li>
+                        </ul>      
+                    </li>
+                    <li class="row3P1">籌碼面 ▾
+                        <ul class="row3P2 ">
+                            <li><a href="#tab12">外資連續買賣超</a></li>
+                            <li><a href="#tab13">投信連續買賣超</a></li>
+                            <li><a href="#tab14">大戶連續買賣超</a></li>
+                            <li><a href="#tab15">融資餘額</a></li>
+                            <li><a href="#tab16">融券餘額</a></li>
+                            <li><a href="#tab17">主力進出</a></li>
+                        </ul>      
+                    </li>
+                    <li class="row3P1">競爭力 ▾
+                        <ul class="row3P2 ">
+                            <li><a href="#tab18">營業毛利率</a></li>
+                            <li><a href="#tab19">平均營益率</a></li>
+                            <li><a href="#tab20">平均淨利率</a></li>
+                            <li><a href="#tab21">資產報酬率</a></li>
+                            <li><a href="#tab22">股東權利報酬率</a></li>
+                            <li><a href="#tab23">研發費用比率</a></li>
+                        </ul>  
+                    </li>
+                    <li class="row3P1">活動力 ▾
+                        <ul class="row3P2 ">
+                            <li><a href="#tab24">總資產周轉率</a></li>
+                            <li><a href="#tab25">淨值週轉率</a></li>
+                            <li><a href="#tab26">固定資產週轉率</a></li>
+                            <li><a href="#tab27">存貨週轉率</a></li>
+                        </ul>      
+                    </li>
+                    <li class="row3P1">安全性 ▾
+                        <ul class="row3P2 ">
+                            <li><a href="#tab28">負債比率</a></li>
+                            <li><a href="#tab29">流動比率</a></li>
+                            <li><a href="#tab30">速動比率</a></li>
+                            <li><a href="#tab31">長期資金適合率</a></li>
+                            <li><a href="#tab32">背書保證/淨值比</a></li>
+                            <li><a href="#tab33">應收帳款天數</a></li>
+                            <li><a href="#tab34">平均存貨天數</a></li>
+                            <li><a href="#tab35">營收外收支/淨值</a></li>
+                        </ul>      
+                    </li>
+                    <li class="row3P1">市場指標 ▾
+                        <ul class="row3P2 ">
+                            <li><a href="#tab36">市場總值</a></li>
+                            <li><a href="#tab37">價格/淨值比</a></li>
+                            <li><a href="#tab38">價格/營收比</a></li>
+                            <li><a href="#tab39">本益比</a></li>
+                            <li><a href="#tab40">EPS</a></li>
+                            <li><a href="#tab41">殖利率</a></li>
+                        </ul>      
+                    </li>
+                    <li class="row3P1">成長力 ▾
+                        <ul class="row3P2 ">
+                            <li><a href="#tab42">營收平均成長</a></li>
+                            <li><a href="#tab43">營業毛利平均成長</a></li>
+                            <li><a href="#tab44">淨利平均成長</a></li>
+                            <li><a href="#tab45">營業利益平均成長</a></li>
+                        </ul>  
+                    </li>
+                   <li class="row3P1">大家都用 ▾
+                        <ul class="row3P2 ">
+                            <li><a href="#tab46">大家都用 詳細</a></li>
+                       </ul>    
+                   </li>              
+               </ul>
+           </div>
+           <div class="right">
+               <div class="row2">
+               <h1>進階選擇</h1>
+               <ul class="tab_container">
+                   <li id="tab1" class="tab_content">
+                     <h2>巴菲特</h2>
+                     <table>
+                           <tr><td>ROE近3年平均大於15</td></tr>
+                           <tr><td>ROA近3年平均大於5</td></tr>
+                           <tr><td>本益比(P/E)小於 20</td></tr>
+                           <tr><td>股價淨值比(P/B)小於2</td></tr>
+                           <tr><td>自由現金流量近5年為正數</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab2" class="tab_content">
+                       <h2>葛拉漢</h2>
+                       <table>
+                               <tr><td>EPS 近5年平均為正數</td></tr>
+                               <tr><td>本益比(P/E)小於20</td></tr>
+                               <tr><td>股價淨值比(P/B)小於2</td></tr>
+                               <tr><td>稅後淨利成長率近3年平均大於50%</td></tr>
+                               <tr><td>營益率近5年平均大於50%</td></tr>
+                               <tr><td>10~營益率近1年平均大於50%</td></tr>
+                        </table>
+                        <div class="btnall">全部加入</div>
+                   </li>
+                   <li id="tab3" class="tab_content">
+                       <h2>麥克莫非</h2>
+                       <table>
+                               <tr><td>營收成長近3年平均大於20%</td></tr>
+                               <tr><td>稅後淨利成長率近3年平均大於50%</td></tr>
+                               <tr><td>ROE近3年平均大於15</td></tr>
+                               <tr><td>研發費用比率近3年平均大於5%</td></tr>
+                        </table>
+                        <div class="btnall">全部加入</div>
+                   </li>
+                   <li id="tab4" class="tab_content">
+                       <h2>麥克喜偉</h2>
+                       <table>
+                               <tr><td>營收成長近5年平均大於20%</td></tr>
+                               <tr><td>營收成長近1年平均大於20%</td></tr>
+                               <tr><td>ROE近3年平均大於15</td></tr>
+                               <tr><td>稅後淨利成長率近3年平均大於50%</td></tr>
+                               <tr><td>自由現金流量近5年為正數</td></tr>
+                               <tr><td>本益比(P/E)小於20</td></tr>
+                        </table>
+                        <div class="btnall">全部加入</div>
+                   </li>
+                   <li id="tab5" class="tab_content">
+                     <h2>股&nbsp;&nbsp;價</h2>
+                     <table>
+                           <tr><td>小於10</td></tr>
+                           <tr><td>小於20</td></tr>
+                           <tr><td>小於30</td></tr>
+                           <tr><td>小於40</td></tr>
+                           <tr><td>小於50</td></tr>
+                           <tr><td>10~30</td></tr>
+                           <tr><td>30~50</td></tr>
+                           <tr><td>50~100</td></tr>
+                           <tr><td>100以上</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab6" class="tab_content">
+                     <h2>成交量</h2>
+                     <table>
+                           <tr><td>大於300張</td></tr>
+                           <tr><td>大於500張</td></tr>
+                           <tr><td>大於1000張</td></tr>
+                           <tr><td>大於3000張</td></tr>
+                           <tr><td>大於5000張</td></tr>
+                           <tr><td>大於10000張</td></tr>
+                           <tr><td>小於300張</td></tr>
+                           <tr><td>小於500張</td></tr>
+                           <tr><td>小於1000張</td></tr>
+                           <tr><td>小於3000張</td></tr>
+                           <tr><td>小於5000張</td></tr>
+                           <tr><td>小於10000張</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab7" class="tab_content">
+                     <h2>收盤價站上/跌破</h2>
+                     <table>
+                           <tr><td>收盤價站上 ↑</td></tr>
+                           <tr><td>收盤價跌破 ↓</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab8" class="tab_content">
+                     <h2>收盤連續上漲/下跌</h2>
+                     <table>
+                           <tr><td>連續上漲 ↑</td></tr>
+                           <tr><td>連續下跌 ↓</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab9" class="tab_content">
+                     <h2>收盤創新高/創新低</h2>
+                     <table>
+                           <tr><td>創新高 ↑</td></tr>
+                           <tr><td>創新低 ↓</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab10" class="tab_content">
+                     <h2>成交量持續擴張/萎縮</h2>
+                     <table>
+                           <tr><td>成交量持續擴張 ↑</td></tr>
+                           <tr><td>成交量持續萎縮 ↓</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab11" class="tab_content">
+                     <h2>過去價格漲跌幅</h2>
+                     <table>
+                           <tr><td>1日漲幅</td></tr>
+                           <tr><td>1日跌幅</td></tr>
+                           <tr><td>5日漲幅</td></tr>
+                           <tr><td>5日跌幅</td></tr>
+                           <tr><td>20日漲幅</td></tr>
+                           <tr><td>20日跌幅</td></tr>
+                           <tr><td>60日漲幅</td></tr>
+                           <tr><td>60日跌幅</td></tr>
+                           <tr><td>120日漲幅</td></tr>
+                           <tr><td>120日跌幅</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab12" class="tab_content">
+                     <h2>外資連續買賣超</h2>
+                     <table>
+                           <tr><td>外資 買超 ↑</td></tr>
+                           <tr><td>外資 賣超 ↓</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab13" class="tab_content">
+                     <h2>投信連續買賣超</h2>
+                     <table>
+                           <tr><td>投信 買超 ↑</td></tr>
+                           <tr><td>投信 賣超 ↓</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab14" class="tab_content">
+                     <h2>大戶連續買賣超</h2>
+                     <table>
+                           <tr><td>大戶 買超 ↑</td></tr>
+                           <tr><td>大戶 賣超 ↓</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab15" class="tab_content">
+                     <h2>融資餘額</h2>
+                     <table>
+                           <tr><td>融資 增加 ↑</td></tr>
+                           <tr><td>融資 減少 ↓</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab16" class="tab_content">
+                     <h2>融券餘額</h2>
+                     <table>
+                           <tr><td>融券 增加 ↑</td></tr>
+                           <tr><td>融券 減少 ↓</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab17" class="tab_content">
+                     <h2>主力進出</h2>
+                     <table>
+                           <tr><td>淨買超 ↑</td></tr>
+                           <tr><td>淨賣超 ↓</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab18" class="tab_content">
+                     <h2>營業毛利率</h2>
+                     <table>
+                           <tr><td>近一季</td></tr>
+                           <tr><td>近一年</td></tr>
+                           <tr><td>近三年</td></tr>
+                           <tr><td>近五年</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab19" class="tab_content">
+                     <h2>平均營益率</h2>
+                     <table>
+                           <tr><td>近一季</td></tr>
+                           <tr><td>近一年</td></tr>
+                           <tr><td>近三年</td></tr>
+                           <tr><td>近五年</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab20" class="tab_content">
+                     <h2>平均淨利率</h2>
+                     <table>
+                           <tr><td>近一季</td></tr>
+                           <tr><td>近一年</td></tr>
+                           <tr><td>近三年</td></tr>
+                           <tr><td>近五年</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab21" class="tab_content">
+                     <h2>資產報酬率</h2>
+                     <table>
+                           <tr><td>近一季</td></tr>
+                           <tr><td>近一年</td></tr>
+                           <tr><td>近三年</td></tr>
+                           <tr><td>近五年</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab22" class="tab_content">
+                     <h2>股東權利報酬率</h2>
+                     <table>
+                           <tr><td>近一季</td></tr>
+                           <tr><td>近一年</td></tr>
+                           <tr><td>近三年</td></tr>
+                           <tr><td>近五年</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab23" class="tab_content">
+                     <h2>研發費用比率</h2>
+                     <table>
+                           <tr><td>近一季</td></tr>
+                           <tr><td>近一年</td></tr>
+                           <tr><td>近三年</td></tr>
+                           <tr><td>近五年</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab24" class="tab_content">
+                     <h2>總資產周轉率</h2>
+                     <table>
+                           <tr><td>近一季</td></tr>
+                           <tr><td>近一年</td></tr>
+                           <tr><td>近三年</td></tr>
+                           <tr><td>近五年</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab25" class="tab_content">
+                     <h2>淨值週轉率</h2>
+                     <table>
+                           <tr><td>近一季</td></tr>
+                           <tr><td>近一年</td></tr>
+                           <tr><td>近三年</td></tr>
+                           <tr><td>近五年</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab26" class="tab_content">
+                     <h2>固定資產週轉率</h2>
+                     <table>
+                           <tr><td>近一季</td></tr>
+                           <tr><td>近一年</td></tr>
+                           <tr><td>近三年</td></tr>
+                           <tr><td>近五年</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab27" class="tab_content">
+                     <h2>存貨週轉率</h2>
+                     <table>
+                           <tr><td>近一季</td></tr>
+                           <tr><td>近一年</td></tr>
+                           <tr><td>近三年</td></tr>
+                           <tr><td>近五年</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab28" class="tab_content">
+                     <h2>負債比率</h2>
+                     <table>
+                           <tr><td>負債比率小於30%</td></tr>
+                           <tr><td>負債比率小於40%</td></tr>
+                           <tr><td>負債比率小於50%</td></tr>
+                           <tr><td>負債比率小於60%</td></tr>
+                           <tr><td>負債比率至少60%</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab29" class="tab_content">
+                     <h2>流動比率</h2>
+                     <table>
+                           <tr><td>流動比率小於100%</td></tr>
+                           <tr><td>流動比率至少100%</td></tr>
+                           <tr><td>流動比率至少150%</td></tr>
+                           <tr><td>流動比率至少200%</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab30" class="tab_content">
+                     <h2>速動比率</h2>
+                     <table>
+                           <tr><td>速動比率小於100%</td></tr>
+                           <tr><td>速動比率至少100%</td></tr>
+                           <tr><td>速動比率至少150%</td></tr>
+                           <tr><td>速動比率至少200%</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab31" class="tab_content">
+                     <h2>長期資金適合率</h2>
+                     <table>
+                           <tr><td>長期資金適合率小於50%</td></tr>
+                           <tr><td>長期資金適合率至少50%</td></tr>
+                           <tr><td>長期資金適合率至少70%</td></tr>
+                           <tr><td>長期資金適合率至少100%</td></tr>
+                           <tr><td>長期資金適合率至少120%</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab32" class="tab_content">
+                     <h2>背書保證/淨值比</h2>
+                     <table>
+                           <tr><td>背書保證/淨值比小於20%</td></tr>
+                           <tr><td>背書保證/淨值比小於30%</td></tr>
+                           <tr><td>背書保證/淨值比小於40%</td></tr>
+                           <tr><td>背書保證/淨值比小於50%</td></tr>
+                           <tr><td>背書保證/淨值比至少50%</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab33" class="tab_content">
+                     <h2>應收帳款天數</h2>
+                     <table>
+                           <tr><td>應收帳款天數小於45天</td></tr>
+                           <tr><td>應收帳款天數小於60天</td></tr>
+                           <tr><td>應收帳款天數小於90天</td></tr>
+                           <tr><td>應收帳款天數小於120天</td></tr>
+                           <tr><td>應收帳款天數至少120天</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab34" class="tab_content">
+                     <h2>平均存貨天數</h2>
+                     <table>
+                           <tr><td>平均存貨天數小於45天</td></tr>
+                           <tr><td>平均存貨天數小於60天</td></tr>
+                           <tr><td>平均存貨天數小於90天</td></tr>
+                           <tr><td>平均存貨天數小於120天</td></tr>
+                           <tr><td>平均存貨天數至少120天</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab35" class="tab_content">
+                     <h2>營收外收支/淨值</h2>
+                     <table>
+                           <tr><td>營收外收支/淨值小於20天</td></tr>
+                           <tr><td>營收外收支/淨值小於30天</td></tr>
+                           <tr><td>營收外收支/淨值小於40天</td></tr>
+                           <tr><td>營收外收支/淨值小於50天</td></tr>
+                           <tr><td>營收外收支/淨值至少50天</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab36" class="tab_content">
+                     <h2>市場總值</h2>
+                     <table>
+                           <tr><td>市場總值小於50億</td></tr>
+                           <tr><td>市場總值至少100億</td></tr>
+                           <tr><td>市場總值至少150億</td></tr>
+                           <tr><td>市場總值至少200億</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab37" class="tab_content">
+                     <h2>價格/淨值比</h2>
+                     <table>
+                           <tr><td>價格/淨值比小於1%</td></tr>
+                           <tr><td>價格/淨值比小於2%</td></tr>
+                           <tr><td>價格/淨值比小於3%</td></tr>
+                           <tr><td>價格/淨值比小於20%</td></tr>
+                           <tr><td>價格/淨值比至少20%</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab38" class="tab_content">
+                     <h2>價格/營收比</h2>
+                     <table>
+                           <tr><td>價格/營收比小於0.5%</td></tr>
+                           <tr><td>價格/營收比小於1.5%</td></tr>
+                           <tr><td>價格/營收比小於2.5%</td></tr>
+                           <tr><td>價格/營收比小於3.5%</td></tr>
+                           <tr><td>價格/營收比至少3.5%</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab39" class="tab_content">
+                     <h2>本益比</h2>
+                     <table>
+                           <tr><td>本益比小於0</td></tr>
+                           <tr><td>本益比小於10</td></tr>
+                           <tr><td>本益比小於20</td></tr>
+                           <tr><td>本益比小於30</td></tr>
+                           <tr><td>本益比小於50</td></tr>
+                           <tr><td>本益比小於100</td></tr>
+                           <tr><td>本益比至少100</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab40" class="tab_content">
+                     <h2>EPS</h2>
+                     <table>
+                           <tr><td>EPS小於0</td></tr>
+                           <tr><td>EPS大於0</td></tr>
+                           <tr><td>EPS小於0.5</td></tr>
+                           <tr><td>EPS小於1</td></tr>
+                           <tr><td>EPS小於2</td></tr>
+                           <tr><td>EPS小於3</td></tr>
+                           <tr><td>EPS小於5</td></tr>
+                           <tr><td>EPS 0~1</td></tr>
+                           <tr><td>EPS 0~2</td></tr>
+                           <tr><td>EPS 0~3</td></tr>
+                           <tr><td>EPS 0~5</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab41" class="tab_content">
+                     <h2>殖利率</h2>
+                     <table>
+                           <tr><td>殖利率至少2</td></tr>
+                           <tr><td>殖利率至少4</td></tr>
+                           <tr><td>殖利率至少6</td></tr>
+                           <tr><td>殖利率至少8</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab42" class="tab_content">
+                     <h2>營收平均成長</h2>
+                     <table>
+                           <tr><td>營收平均成長 近一季</td></tr>
+                           <tr><td>營收平均成長 近一年</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab43" class="tab_content">
+                     <h2>營業毛利平均成長</h2>
+                     <table>
+                           <tr><td>營業毛利平均成長 近一季</td></tr>
+                           <tr><td>營業毛利平均成長 近一年</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab44" class="tab_content">
+                     <h2>淨利平均成長</h2>
+                     <table>
+                           <tr><td>淨利平均成長 近一季</td></tr>
+                           <tr><td>淨利平均成長 近一年</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab45" class="tab_content">
+                     <h2>營業利益平均成長</h2>
+                     <table>
+                           <tr><td>營業利益平均成長 近一季</td></tr>
+                           <tr><td>營業利益平均成長 近一年</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+                   <li id="tab46" class="tab_content">
+                     <h2>大家都用</h2>
+                     <table>
+                           <tr><td>本益比(P/E)小於20</td></tr>
+                           <tr><td>今日股價創3日來新高</td></tr>
+                           <tr><td>今日股價大於10元</td></tr>
+                           <tr><td>今日股價小於50元</td></tr>
+                           <tr><td>ROE近3年平均大於5</td></tr>
+                           <tr><td>ROA近3年平均大於5</td></tr>
+                           <tr><td>近5年現金流量為正數</td></tr>
+                     </table>
+                     <div class="btnall">全部加入</div> 
+                   </li>
+               </ul>   
+           </div>
+               <div class="row3">
+               <h1>已加入條件(最多十個)</h1>
+               <content>
+                   <div class="title">
+                       <p>條件項目</p>
+                       <p>刪除</p>
+                   </div>
+               </content>
+           </div>
+           </div>
+       </div>
+       <div class="inf">
+           <p>符合條件之個股共<span>&nbsp;</span>檔</p>
+           <p>您的搜尋條件：</p>
+       </div>
+    </div>
+    <footer></footer>
+<script>
+    $('.row1 .row3P1').first().addClass('bg');
+    /*整個tab*/
+    $(function(){
+		// 預設顯示第一個 Tab
+		var _showTab = 0;
+		$('.easyWP').each(function(){
+			// 目前的頁籤區塊
+			var $tab = $(this);
+			var $defaultLi = $('.row3P2 li', $tab).eq(_showTab).addClass('active');
+			$($defaultLi.find('a').attr('href')).siblings().hide();	
+			// 當 li 頁籤被點擊時...
+			// 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
+			$('.row3P2 li', $tab).click(function() {
+				// 找出 li 中的超連結 href(#id)
+				var $this = $(this),
+					_clickTab = $this.find('a').attr('href');
+				// .row3P2 li 
+				$this.addClass('active').siblings('.active').removeClass('active');
+                $this.parents('.row3P1').siblings('.row3P1').find('.row3P2 li').removeClass('active');
+                // .row3P1
+                $this.parents('.row3P1').css({"background-color":"#e34040","color":"#fff"});
+                $this.parents('.row3P1').siblings('.row3P1').css({"background-color":"#f0f0f0","color":"#444"});
+             
+				// 淡入相對應的內容並隱藏兄弟元素
+				$(_clickTab).stop(false, true).fadeIn().siblings().hide();
+				return false;
+			}).find('a').focus(function(){
+				this.blur();
+			});   
+		});
+	});
+    /*選單下拉*/ 
+    $('.row3P1').click(function(){
+        $(this).find('.row3P2').slideToggle(500);
+        $(this).siblings('.row3P1').find('.row3P2').slideUp(500);
+    });
+    /*手機版*/
+
+        if($(window).width() <= 555){
+            $('.row3P2 li').click(function(){
+                $(this).parent('.row3P2').slideUp(500);
+            });
+        }
+    /*若row2\row3內容相同,只能點一次,不同可以再次點選*/
+    /*加入input*/
+    var txt1 = "<input type='checkbox'></input>";
+    if($('.row3 content table').val() == $('.row2 content').val()){
+           $('.btnall').one('click',function(e){
+             $('.row3 content').append(($(this).siblings('table')).clone());
+             $('.row3 td').after(txt1);  
+        });     
+        $('.row2 td').click(function(){
+               $('.row3 content').append(($(this).siblings('table')).clone());
+           });
+       }else{$('.btnall').click(function(){
+        $('.row3 content').append(($(this).siblings('table')).clone());
+           $('.row3 td').after(txt1);
+    });}
+    /*加入input*/
+    $('.row3 td').click(function(){
+         $(this).siblings('input').click();
+    });
+    
+</script>    
+</body>
+</html>

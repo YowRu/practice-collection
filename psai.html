@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/aos/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link rel="stylesheet" href="css/layout.css" type="text/css">
+    <link rel="stylesheet" href="js/aos/dist/aos.css" type="text/css">
+    <link rel="stylesheet" href="css/psai.css" type="text/css">
+    <title>YowRu's Collection | GraphicDesidn</title>
+</head>
+<body>
+    <header></header>
+    <div id="main">
+        <div class="r r1">
+            <div class="image1"></div>
+            <p>2018宇宙星球桌曆</p>
+        </div>
+        <div class="r r2">
+            <div class="nav">
+                <a href="#one">海報</a>
+                <a href="#two">票券</a>
+                <a href="#three">卡片</a>
+                <a href="#four">傳單</a>
+            </div>
+        </div>
+        <div id="one" class="b">海報</div>
+        <div class="r r3">
+            <div class="image4" data-aos-delay="300" aos="fade-right"></div>
+            <content>
+                <div class="img1" data-aos="fade-right" data-aos-delay="300"></div>
+            </content>
+            <content>
+                <div class="img2" data-aos="fade-right" data-aos-delay="700"></div>
+            </content>
+            <content>
+                <div class="img3" data-aos="fade-right" data-aos-delay="1100"></div>
+            </content>
+        </div>
+        <div class="bg3"></div>
+        <div id="two"class="b">票券</div>
+        <div class="r r4">
+            <div class="l"data-aos="fade-left" data-aos-delay="800">
+                <div class="image2"></div>
+                <p>鼓勵講師更新激發學員學習之新穎教案：利用企業精神口號環繞票券,及logo作為官印,色調為企業視覺主色</p>
+            </div>
+            <div class="r" data-aos="fade-left" data-aos-delay="1200">
+                <div class="image3"></div>
+                <p>年度講師訓練之鼓勵學員票券：以企業吉祥物為代表,較輕鬆的方式呈現兌換票券</p>
+            </div>
+        </div>
+        <div id="three"class="b">卡片</div>
+        <div class="r r5">
+            <div class="u"data-aos="fade-right" data-aos-delay="300">
+                <div class="image4"></div>
+                <p>大會邀請卡,正面使用CIS顏色強調蝴蝶結,反面以日期提醒受邀人,不論對折或攤開都方便收藏並明白主題。</p>
+            </div>
+            <div class="d"data-aos="fade-left" data-aos-delay="800">
+               <p>重車改裝的名片設計,除了重車改裝,也代理多款進口車,以MV AGUSTA剪影帶入名片,並使用蝴蝶結串聯品牌名稱。</p>
+                <div class="image5"></div>
+            </div>
+            <div class="d block"data-aos="fade-left" data-aos-delay="800">
+               <div class="image5"></div>
+               <p>重車改裝的名片設計,除了重車改裝,也代理多款進口車,以MV AGUSTA剪影帶入名片,並使用蝴蝶結串聯品牌名稱。</p>
+            </div>
+        </div>
+        <div id="four"class="b">傳單</div>
+        <div class="r r6">
+            <content>
+                <div class="image6"data-aos="fade-down" data-aos-delay="300"></div>
+            </content>
+            <content>
+                <div class="image7"data-aos="fade-down" data-aos-delay="600"></div>
+            </content>
+            <content>
+                <div class="image8"data-aos="fade-down" data-aos-delay="900"></div>
+            </content>
+        </div>
+    </div>
+    <footer></footer>
+<script>
+       $(function() {
+           $('a[href=#one]').click(function() {
+               $('html,body').animate({
+                 scrollTop:$('#one').offset().top-80
+               },800);});
+           $('a[href=#two]').click(function() {
+               $('html,body').animate({
+                 scrollTop:$('#two').offset().top-80
+               },800);});
+           $('a[href=#three]').click(function() {
+               $('html,body').animate({
+                 scrollTop:$('#three').offset().top-80
+               },800);});
+           $('a[href=#four]').click(function() {
+               $('html,body').animate({
+                 scrollTop:$('#four').offset().top-80
+               },800);});
+                });  
+    AOS.init({
+            easing: 'easeInOutQuad',
+            duration: '1300',
+        });
+</script> 
+</body>
+</html>

@@ -1,0 +1,49 @@
+<div class="wp">
+    <img src="img/index/logo1.png">
+    <div class="up">
+        <a href="index.html">首頁</a><span>/</span>
+        <a href="web.html">網站</a><span>/</span>
+        <a href="psai.html">平面</a><span>/</span>
+        <a href="hm.html">卡片</a><span>/</span>
+        <a href="index.html#c">聯絡我</a>
+    </div>
+    <nav>
+        <span></span>
+        <span></span>
+        <span></span>
+    </nav>
+     <div class="menu">
+        <a href="index.html">首頁</a>
+        <a href="web.html">網站</a>
+        <a href="psai.html">平面</a>
+        <a href="hm.html">卡片</a>
+        <a href="index.html#c">聯絡我</a>
+    </div>
+</div>
+<h1>期許自己,能夠用不一樣的角度觀察,創造暖心的作品。</h1>
+<div class="bg"></div>
+
+<script>
+/*menu*/
+$(window).resize(function(){
+    var $H=$(window).height();
+    $('header .menu').height($H-80);
+    $('header .bg').height($H);
+    $('header .menu').hide();
+    $('header .bg').hide();
+     $('header nav').removeClass('menuOpen');
+});
+var $H=$(window).height();
+$('header .menu').height($H-80);
+$('header .bg').height($H);
+$('header nav').click(function(){
+    $('header .menu').slideToggle().css('display','flex');
+    $('header .bg').toggle();
+    $('header nav').toggleClass('menuOpen');
+});
+$('header .bg').click(function(){
+    $('header .menu').fadeToggle();
+    $('header .bg').toggle();
+    $('header nav').toggleClass('menuOpen'); 
+});
+</script> 

@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="keywords" content="17988,鄉民財經,財經,台股,股票,期貨,選擇權,海外期貨,金融,賺錢,技術分析,理財,投資,個股,選股,大盤,盤勢" /><meta name="description" content="我們是一個擁有財經知識、專業分析師、影音與軟體的網路學習網站，提供多項線上即時服務，讓使用者自行選擇影音教學、軟體操作或分析師講座，從豐富的線上資料庫，輕鬆入門或進階學習，協助大眾精確而有效率的進修投資理財知識。" />
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/FlexSlider/jquery.flexslider-min.js"></script>
+    <link rel="stylesheet" href="icon/font/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="js/FlexSlider/flexslider.css" type="text/css">
+    <link rel="stylesheet" href="css/1080layout.css" type="text/css">
+    <link rel="stylesheet" href="css/1080index.css" type="text/css">
+    <link rel="stylesheet" href="css/agent.css" type="text/css">
+    <title>即時行情 期權 | 鄉民財經</title>
+</head>
+<style>
+    .row1{display: flex;justify-content: space-between;border-bottom:3px solid #727881;padding: 0 10px;}
+    .row1 .left, .row1 .right{display: flex;align-items: flex-end;justify-content: center;}
+    .row1 .left h1{font-size: 1.5rem;line-height: 1.5rem; font-weight: normal;color:#444; }
+    .row1 .left h1 span{font-size: 1rem;font-weight: bold;margin-left: 5px;color: #999;}
+    .row1 .left time{font-size: 0.9rem;line-height: 1.5rem; margin-left: 20px;color: #999;}
+    .row1 .right h2{font-size: 1rem;color:#1B6393; font-weight: normal;}
+    .row1 .right p{font-size: 1rem;color: #444;margin-left: 10px;}
+    .row1 .right p a{color: #444;}
+    .row1 .right p a:hover{color: #f44336;}
+    .row1 .right p span{margin-left: 5px;font-size:0.8rem;}
+    .add-mystock{margin-left: 10px;cursor: pointer;margin-bottom: 3px;
+border:1px solid #d7dada; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:12px;padding: 3px; text-decoration:none; display:inline-block;font-weight:normal; color:#444;
+ background-color: #f4f5f5; background-image: -webkit-gradient(linear, left top, left bottom, from(#f4f5f5), to(#dfdddd));
+ background-image: -webkit-linear-gradient(top, #f4f5f5, #dfdddd);
+ background-image: -moz-linear-gradient(top, #f4f5f5, #dfdddd);
+ background-image: -ms-linear-gradient(top, #f4f5f5, #dfdddd);
+ background-image: -o-linear-gradient(top, #f4f5f5, #dfdddd);
+ background-image: linear-gradient(to bottom, #f4f5f5, #dfdddd);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f4f5f5, endColorstr=#dfdddd);
+}
+/*row2*/
+    .row2{display: flex;justify-content: flex-start;}
+    .row2 .left{width: 20%;padding: 10px;background-color:#fafafa;text-align: center;border-bottom: 1px solid rgba(211, 211, 211, 0.5);}
+    .row2 .left .price{font-size: 1.5rem;font-weight: bold;margin-bottom: 2px;}
+    .row2 .right{width: 80%;display: flex;flex-wrap: wrap;border: 1px solid rgba(211, 211, 211, 0.5);}
+    .row2 .right li{width:18%;padding: 0 10px;box-sizing: border-box;border-right: 1px solid rgba(211, 211, 211, 0.5);border-bottom: 1px solid rgba(211, 211, 211, 0.5);font-size: 0.9rem;font-weight: normal;padding: 5px;box-sizing: border-box;color: #444;vertical-align: middle;}
+    .row2 .right li:nth-of-type(5),.row2 .right li:nth-of-type(10){border-right: 0;width:24%;}
+    .row2 .right li:nth-of-type(6),.row2 .right li:nth-of-type(7),.row2 .right li:nth-of-type(8),
+    .row2 .right li:nth-of-type(9),.row2 .right li:nth-of-type(10){border-bottom: 0;}
+/*row2_m*/
+    .row2_m{display: none;}
+    .row2_m .hd_m{display: flex;justify-content: space-between;align-items:flex-end;padding:10px;background: -webkit-linear-gradient(#fdfdfd, #f3f3f3);background: linear-gradient(#fdfdfd, #f3f3f3);border-bottom:1px solid #727881;}
+    .row2_m .hd_m h1{font-size: 1.5rem;line-height: 1.5rem; font-weight: normal;color:#444; }
+    .row2_m .hd_m h1 span{font-size: 1rem;font-weight: bold;margin-left: 5px;color: #999;}
+    .row2_m .now{display: flex;justify-content: space-between;align-items:center;padding:5px 10px;}
+    .row2_m .now a{padding: 3px;box-sizing: border-box;font-size:1.2rem;background-color:aliceblue;color:#1B6393;}
+    .row2_m .now h2{text-align: center;}
+    .row2_m .now h2 .price{font-size: 1.5rem;font-weight: bold;margin-bottom: 2px;}
+    .row2_m .now h2 span{font-size:1rem;}
+    .row2_m .all_inf{display: flex;flex-wrap: wrap;}
+    .row2_m .all_inf li{width:50%;height: 36px;line-height: 36px; display: flex;justify-content: space-between;padding: 0 3px;box-sizing: border-box;}
+    .row2_m .all_inf li span:first-child{text-align:left;color: #999;width:60%;}
+    .row2_m .all_inf li span:last-child{color: #444;text-align: right;} 
+/*row3*/
+    .BIG{margin-bottom: 30px;}
+    .BIG .hd{display: flex;justify-content:space-between;align-items:center;z-index:2;text-align: center;background: -webkit-linear-gradient(#fdfdfd, #f3f3f3);background: linear-gradient(#fdfdfd, #f3f3f3);margin-bottom: 15px;}
+    .BIG .hd .p{display:flex;align-items: flex-end;}
+    .BIG .hd .p h2{font-size: 1rem;font-weight: normal;color: #444;margin-right: 3px;}
+    .BIG .hd .p #selectStock{font-size: 1rem;}
+    .row3{display: flex;justify-content:flex-start;align-items:flex-start;text-align: center;} 
+    .row3 li{width:90px;height: 42px;line-height: 42px;box-shadow: inset -1px -1px rgba(0, 0, 0, .1);cursor: pointer;position: relative;color: #444;}
+    .row3 li:hover{background-color: #ddd;}
+    .row3 li>a{color:#444;font-weight:normal;font-size: 1rem;height: 100%;display: inline-block;}
+    .row3 li.active{background-color: #f44336;}
+    .row3 li.active a{color: #fff;}  
+/*row4*/
+    .row4{display: flex;}
+    .row4 .left{width: 70%;display: flex;}
+    .row4 .left .l1{width:75%;}
+    .row4 .left .l1 .chart{background-color: #000;height: 368px;}
+    .tabs1{display: flex;justify-content:flex-start;align-items:center;text-align: center;}
+    .tabs1 li{ display: inline-block; width:88px;height: 36px;line-height:36px;text-align: center;border-right:1px solid rgba(187, 187, 187, 0.41); }
+    .tabs1 li a{display:inline-block;width:100%;background-color: transparent;color: #444;font-size: 1rem;font-weight:normal;cursor: pointer;}
+    .tabs1 li.hover{border-bottom:2px solid #f44336;}
+.tabs1 li.hover a{color:#f44336;}
+.tabs1 li.active{background-color:#f44336;color: #fff;border-bottom:2px solid #f44336;box-shadow: none;}
+.tabs1 li.active a{color: #fff;}
+    .row4 .left .l2{width:25%;}
+    .row4 .left .l2 .hd,.row4 .right .hd{margin-bottom: 0;}
+    .R_btn{border: 1px solid #f3f3f3;border-radius: 5px;background-color: aliceblue;color: #1B6393;padding: 3px;box-sizing: border-box;font-size: 0.9rem;transition: all 0.5s;}
+    .R_btn:hover{background-color: #2c78ac;color: #fff;}
+    .row4 .left .l2 table.tb.tbhl,.row4 .right table.tb.tbhl{height: 328px;}
+    .row4 .right{width: 29%;margin-left: 1%;}
+    
+    table.tb.tbhl td{border-right:1px solid #ddd;border-bottom:1px solid #ddd; }
+     /*row5*/
+    .row5 h3{font-size: 1.2rem;height: 20px;line-height: 20px; color: #555;margin: 10px 0;}
+    .row5 .down_2 .tab2s{display: flex;flex-wrap: wrap;}
+    .row5 .down_2 .tab2s li{width: 12%;padding:10px 5px;box-sizing: border-box;border: 1px solid #bbb;border-right: 0; }
+    .row5 .down_2 .tab2s li a{color: #444;}
+    .row5 .down_2 .tab2s li.one{width: 14.28%;}
+    .row5 .down_2 .tab2s li.no{width:100px;background: -webkit-linear-gradient(#fdfdfd, #f3f3f3); background: linear-gradient(#fdfdfd, #f3f3f3);color: #363232;text-align: center; font-size:13px;line-height:14px;margin: 5px 3px;border-radius: 5px;border: 1px solid #aaa;position: relative;cursor: pointer;}
+    .row5 .down_2 .tab2s li.no .noul{width:100%;background-color: rgba(0, 0, 0, 0.81);display: none;position: absolute;top:36px;left: 0;z-index: 1;}
+    .row5 .down_2 .tab2s li.no .noul.b{width: auto;}
+    .row5 .down_2 .tab2s li.no .noul li{width: 100%;}
+    .row5 .down_2 .tab2s li.no .noul li a{display: inline-block;width: 100%; color: #fff;}  
+    .row5 .down_2 .tab2s li.no .noul li:hover a{color: #444;}
+    .row5 .down_2 .tab2s li.no .noul li.active:hover a{color: #fff;}
+    .row5 .down_2 .tab2s li.no select{height: 100%;font-size:1rem;line-height: 24px; height:24px;-webkit-border-radius: 5px;-moz-border-radius:5px;border-radius:5px;text-decoration:none; display:inline-block;font-weight:normal;color:#444;background-color:#fff; }
+    .row5 .down_2 .tab2s li:hover{background-color: #ddd;}
+    .row5 .down_2 .tab2s li.active{background-color:#f44336;}
+    .row5 .down_2 .tab2s li.active a{color: #fff;}
+    .row5 .down_2 .tab2s li.no.active{background: -webkit-linear-gradient(#f44336, #f44336);
+background: linear-gradient(#f44336, #f44336);color: #fff;}
+    .row5 .down_2 .tab2s li.no.active select{border:1px solid #f44336;background-color: red;-webkit-background-color: red; color: #fff;}
+    .row5 .down_2 .tab2s.m{display: none;}
+    .row5 .down_2 .row5_1{display: flex;justify-content: space-between;align-items: flex-end; padding: 10px 3px;box-sizing: border-box;}
+    .row5 .down_2 .row5_2{display: flex;margin:10px 0;border-top:1px solid #bbb; border-bottom:1px solid #bbb;}
+    .row5 .down_2 .row5_2.m{display: none;}
+    .row5 .down_2 .row5_2 .left{width: 20%;padding: 10px;background-color:#fafafa;text-align: center;border-bottom: 1px solid rgba(211, 211, 211, 0.5);}
+    .row5 .down_2 .row5_2 .left .price{font-size: 1.5rem;font-weight: bold;margin-bottom: 2px;}
+    .row5 .down_2 .row5_2 .right{width: 80%;display: flex;flex-wrap: wrap;border: 1px solid rgba(211, 211, 211, 0.5);}
+    .row5 .down_2 .row5_2 .right li{width:15%;padding: 0 10px;box-sizing: border-box;border-right: 1px solid rgba(211, 211, 211, 0.5);border-bottom: 1px solid rgba(211, 211, 211, 0.5);font-size: 0.9rem;font-weight: normal;padding: 5px;box-sizing: border-box;color: #444;vertical-align: middle;}
+    .row5 .down_2 .row5_2 .right li:nth-of-type(6),.row5 .down_2 .row5_2 .right li:nth-of-type(12){border-right: 0;width:24%;}
+    .row5 .down_2 .row5_2 .right li:nth-of-type(7),.row5 .down_2 .row5_2 .right li:nth-of-type(8),
+    .row5 .down_2 .row5_2 .right li:nth-of-type(9),.row5 .down_2 .row5_2 .right li:nth-of-type(10){border-bottom: 0;}
+    .row5 .down_2 .tab2_container{width: 100%; height: 347px;background-color: black;color: #fff;padding-bottom: 5px;box-sizing: border-box;overflow: hidden;}
+/*row6*/
+    .row6{display: flex;}
+    .row6 .left{width:65%;}
+    .row6 .left h3{text-align: center;font-size: 1.3rem; color: #444;margin-bottom: 5px;}
+    .row6 .right{width:34%;margin-left: 1%;}
+    .row6 .right .hd{margin-bottom: 0;}
+    .row6 .right .hd h3{color: #444;font-size: 1rem; font-weight: normal;}
+    .row6 .right .hd span a{font-size: 13px; color: #1B6393;}
+    .row6 .right .hd span:hover a{color:#f44336;}
+    .row6 .left .content table.tb.tbhl th{border-top:1px solid rgba(237, 237, 237, 0.89);}
+    .row6 .left .content table.tb.tbhl th:first-child{width:20%;}
+    .row6 .left .content table.tb.tbhl th:last-child{width:80%;}
+/*row7*/
+    .row7{display: flex;}
+    .row7 .left{width:65%;}
+    .row7 .right{width:34%;margin-left: 1%;}
+    .row7 .left table td{background: #fafafa;padding:5px 2px;box-sizing: border-box;border-bottom: 1px solid #e3e3e3;}
+    .row7 .left ul li{display: flex;border-bottom: 1px solid #ddd;box-sizing: border-box;}
+    .row7 .left ul li time{width: 10%;display: flex;flex-direction: column;justify-content: center;text-align: center;background-color: #fbfbfb;border-right: 1px solid #ddd;box-sizing: border-box;font-size: 0.8rem;color: #666;}
+    .row7 .left ul li p{width: 90%;display: flex;flex-direction: column;padding: 8px;box-sizing: border-box;}
+    .row7 .left ul li p a{color: #1B6393;font-size: 1.2rem;}
+    .row7 .left ul li p span{color: #555;padding-left: 6px;box-sizing: border-box;width: 100%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+    .row7 .hd{margin-bottom: 0;}
+    .row7 .hd h3{color: #444;font-size: 1rem; font-weight: normal;}
+    .row7 .left .hd h3{font-size: 1.2rem;font-weight: 600;}
+    .row7 .hd span a{font-size: 13px; color: #1B6393;}
+    .row7 .hd span:hover a{color:#f44336;}
+    @media(max-width:900px){
+        .row4 .right{display: none;}
+        .row4 .left{width: 100%;}
+    }
+    @media(max-width:852px){
+        .row2 .right li{font-size: 13px;width: 19%;}
+        .row2 .right li:nth-of-type(5), .row2 .right li:nth-of-type(10){width: 20%;}
+        .row5 .down_2 .row5_2 .left{padding: 3px;}
+        .row5 .down_2 .row5_2 .left .price{font-size: 1.1rem;}
+        .row5 .down_2 .row5_2 .left .chg{font-size:0.9rem;}
+    }
+    @media(max-width:839px){
+        .row5 .down_2 .row5_2.m{display:block;width: 100%;text-align: center;overflow-x: scroll;background-color: #000; margin-bottom:0;}
+        .row5 .down_2 .row5_2.m table{width: 100%;color: #fff;}
+        .row5 .down_2 .row5_2.m table th{font-weight: normal;width: 17.2%;}
+        .row5 .down_2 .row5_2.m table th.b{width: 18%;}
+        .row5 .down_2 .row5_2.m table th.t{width: 13%;}
+        .row5 .down_2 .row5_2.m table td{width:auto;padding:0 3px;box-sizing: border-box;}
+        .row5 .down_2 .row5_2.m table td.b{width: 18%;}
+        .row5 .down_2 .row5_2.m table td.t{font-size:12px;}
+        .row5 .down_2 .row5_2.m table td.y{color: yellow;}
+        .row5 .down_2 .row5_2.pc{display: none;}
+    }
+     @media(max-width:759px){
+         .row6,.row7{flex-direction: column;}
+         .row6 .left,.row6 .right,.row7 .left{width:100%;margin: 0;}
+        .row1,.row2,.row7 .right{display: none;}
+        .row2_m{display: block;}
+    }
+    @media(max-width:707px){
+        .row5 .down_2 .tab2s li.one,.row5 .down_2 .tab2s li.no{width:auto;padding:10px;box-sizing: border-box;}
+       .row5 .down_2 .tab2s li.one:nth-of-type(5),.row5 .down_2 .tab2s li.one:nth-of-type(6),
+        .row5 .down_2 .tab2s li.one:nth-of-type(7){width: 20%;} 
+        .row5 .down_2 .tab2s li.one:nth-of-type(7){ border-right: 1px solid #bbb;}
+    }
+    @media(max-width:655px){
+        .row4 .left{flex-direction: column;}
+        .row4 .left .l1,.row4 .left .l2{width: 100%;margin: 0;}
+        .row5 h3{text-align: center;}
+    }
+    @media(max-width:573px){
+    .row5 .down_2 .tab2s.pc{display: none;}    
+    .row5 .down_2 .tab2s.m{display:flex;}
+    }
+    @media(max-width:555px){
+    .row7 .left ul li time{width: 15%;}
+    .row7 .left ul li p{width: 85%;}
+    }
+    @media(max-width:500px){
+        .row7 .left ul li p a{width: 100%; overflow: hidden;white-space: nowrap; text-overflow: ellipsis;}
+    }
+    @media(max-width:470px){
+        .row6 .left .content table.tb.tbhl th:first-child{width:25%;}
+        .row6 .left .content table.tb.tbhl th:last-child{width:75%;}
+        .row6 .right .hd{flex-direction: row;justify-content: space-between; height: auto;padding: 5px;box-sizing: border-box;}
+        .row5 .down_2 .row5_2.m table td{font-size: 14px;}
+        .BIG .hd{flex-direction: column;justify-content:space-around;height:80px;padding: 0;}
+        .row3{width: 100%;justify-content: center;}
+        .row3 li{box-shadow:none;border-right:1px solid #ddd;}
+        .row3 li:last-child{border-right: 0;}
+        .row3 li.active{background-color: transparent;}
+        .row3 li.active a{color: #f44336;}
+        .row3 li:hover{border-bottom: 2px solid #f44336;background-color: transparent;}
+        .row3 li:hover a{color: #f44336;}
+        .row4 .left .l2 .hd,.row7 .hd{flex-direction: row;justify-content: space-between; height: auto;padding:5px;box-sizing: border-box;}
+    }
+    @media(max-width:414px){
+        .row2_m .hd_m time{font-size: 13px;}
+        .row3 li{width:30%;}
+        .row7 .left ul li p a{font-size: 1rem;}
+    }
+    @media(max-width:375px){
+        .row6 .left .content table.tb.tbhl th:first-child{width:30%;}
+        .row6 .left .content table.tb.tbhl th:last-child{width:70%;}
+        .row2_m .hd_m h1{font-size: 1.2rem;}
+        .row2_m .hd_m h1 span{font-size: 13px;}
+        .row5 .down_2 .row5_2.m table td{font-size: 13px;
+    }
+</style>
+<body>
+    <header></header>
+    <div id="main">
+        <ul id="breadcrumbs">
+            <li><a href="index.html">首頁</a>></li>
+            <li><a href="option.html">期權</a>></li>
+            <li><a href="option_quotes.html" class="current">台指期 近一</a></li>
+        </ul>
+        <div class="row1">
+            <div class="left">
+                <h1>台指期 近一<span>WTXK7F</span></h1>
+                <time>2017/05/05 14:00:25</time>
+            </div>
+            <div class="right">
+                <h2>加權指數0000</h2>
+                <p><a href="">9899.94</a><span>▼-67.70 -0.68%</span></p>
+                <div class="add-mystock" name="台指期 近一" no="WTXK7F">+自選股</div>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="left">
+                <span class="price">9889.00</span>
+                <p>
+                    <span class="chg">▼-70.00</span>
+                    <span class="chg">-0.70%</span>
+                </p>    
+            </div>
+            <ul class="right">
+                    <li>開盤<span>9946.00</span></li>
+                    <li>最高<span>9951.00</span></li>
+                    <li>最低<span>9879.00</span></li>
+                    <li>昨收<span>9959.00</span></li>
+                    <li>價差<span>-10.94</span></li>
+                    <li>買進<span>9887.00</span></li>
+                    <li>賣出<span>9889.00</span></li>
+                    <li>現量<span>17.00</span></li>
+                    <li>成交價<span>109415.00</span></li>
+                    <li>今日未平倉<span>90977</span></li>
+             </ul>
+        </div>
+        <div class="row2_m">
+            <div class="hd_m">
+                <h1>台指期 近一<span>WTXK7F</span></h1>
+                <time>2017/05/05 14:00:25</time>
+            </div>
+            <div class="now">
+                <h2>
+                    <span class="price">9889.00</span>
+                    <p>
+                        <span class="chg">▼-70.00</span>
+                        <span class="chg">-0.70%</span>
+                    </p>
+                </h2>
+                <a href="" class="R_btn">刷新</a> 
+            </div>
+            <ul class="all_inf">
+                    <li><span>開盤</span><span>9946.00</span></li>
+                    <li><span>昨收</span><span>9959.00</span></li>
+                    <li><span>最高</span><span>9951.00</span></li>
+                    <li><span>最低</span><span>9879.00</span></li>
+                    <li><span>價差</span><span>-10.94</span></li>
+                    <li><span>買進</span><span>9887.00</span></li>
+                    <li><span>賣出</span><span>9889.00</span></li>
+                    <li><span>現量</span><span>17.00</span></li>
+                    <li><span>成交價</span><span>109415.00</span></li>
+                    <li><span>今日未平倉</span><span>90977</span></li>
+                </ul>
+        </div>
+        <div class="BIG">
+            <div class="hd">     
+                <ul class="row3">
+                    <li><a href="#tab1">即時行情</a></li>
+                    <li><a href="#tab2">商品契約</a></li>
+                    <li><a href="#tab3">相關新聞</a></li>
+                </ul>
+                <div class="p">
+                    <h2>快速查詢</h2>
+                    <select class="select" id="selectStock">
+                        <option value="WTX&">台指期近一</option>
+                        <option value="WTX02">台指期近二</option>
+                        <option value="WTF&">金融期近一</option>
+                        <option value="WTF02">金融期近二</option>
+                        <option value="WTE&">電子期近一</option>
+                        <option value="WTE02">電子期近二</option>
+                        <option value="WMT&">小台指近一</option>
+                        <option value="WMT02">小台指近二</option>
+                    </select>
+                </div>
+            </div>
+            <ul class="tab3_container">
+                <li id="tab1" class="tab3_content">
+                    <div class="row4">
+                       <div class="left">
+                          <div class="l1">
+                            <div class="chart"></div>
+                         </div>
+                          <div class="l2">
+                         <div class="hd">
+                             <h1>最佳五檔</h1>
+                             <a href="" class="R_btn">刷新</a> 
+                         </div>
+                         <div class="content">
+                             <table cellpadding="0" cellspacing="0" class="tb tbhl rw5n">
+            <tr>
+                <th>項目</th>
+                <th>價</th>
+                <th>量</th>
+            </tr>
+            <tr>
+                <td>賣五</td>
+                <td>9906.00</td>
+                <td>60.00</td>
+            </tr>
+            <tr>
+                <td>賣四</td>
+                <td>9905.00</td>
+                <td>100.00</td>
+            </tr>
+            <tr>
+                <td>賣三</td>
+                <td>9904.00</td>
+                <td>97.00</td>
+            </tr>
+            <tr>
+                <td>賣二</td>
+                <td>9903.00</td>
+                <td>44.00</td>
+            </tr>
+            <tr>
+                <td>賣一</td>
+                <td>9902.00</td>
+                <td>36.00</td>
+            </tr>
+            
+            <tr>
+                <td>買一</td>
+                <td>9896.00</td>
+                <td>33.00</td>
+            </tr>
+            <tr>
+                <td>買二</td>
+                <td>9895.00</td>
+                <td>70.00</td>
+            </tr>
+            <tr>
+                <td>買三</td>
+                <td>9894.00</td>
+                <td>58.00</td>
+            </tr>
+            <tr>
+                <td>買四</td>
+                <td>9893.00</td>
+                <td>50.00</td>
+            </tr>
+            <tr>
+                <td>買五</td>
+                <td>9892.00</td>
+                <td>67.00</td>
+            </tr>
+
+            <tr>
+                <td>買賣差</td>
+                <td colspan="2">-59.00</td>
+            </tr>
+            <tr>
+                <td>買賣比</td>
+                <td colspan="2">45.20%</td>
+            </tr>
+    </table>
+                         </div>
+                     </div>
+                       </div>
+                       <div class="right">
+                         <div class="hd">
+                             <h1>重點指數</h1>
+                         </div>
+                         <div class="content">
+                             <table cellpadding="0" cellspacing="0" class="tb rw5n tbhl">
+        <tr>
+            <th>名稱</th>
+            <th>最新價</th>
+            <th>漲跌</th>
+            <th>漲幅%</th>
+            <th>時間</th>
+        </tr>
+            <tr>
+                <td><a href="/global/stockindex?StockNo=S2TWZ1" target="_blank">摩台指</a></td>
+                <td>370.60</td>
+                <td>▲0.70</td>
+                <td>0.19%</td>
+                <td> 10:06</td>
+            </tr>
+            <tr>
+                <td><a href="/global/stockindex?StockNo=SHI" target="_blank">上證指數</a></td>
+                <td>3082.38</td>
+                <td>▼-20.66</td>
+                <td>-0.67%</td>
+                <td> 10:06</td>
+            </tr>
+            <tr>
+                <td><a href="/global/stockindex?StockNo=KOR" target="_blank">韓國綜合</a></td>
+                <td>2252.72</td>
+                <td>▲11.48</td>
+                <td>0.51%</td>
+                <td> 11:06</td>
+            </tr>
+            <tr>
+                <td><a href="/global/stockindex?StockNo=B1YM%26" target="_blank">MIN道瓊期</a></td>
+                <td>20945.00</td>
+                <td>▼-9.00</td>
+                <td>-0.04%</td>
+                <td> 21:06</td>
+            </tr>
+</table>
+                         </div>
+                       </div>
+                    </div>
+                    <div class="row5">
+                       <h3>台指期 近一<span>WTXK7F</span>技術分析</h3>
+                       <div class="down_2">
+                           <ul class="tab2s pc">
+                                <li class="one"><a href="#tab2s_1">日Ｋ</a></li>
+                                <li class="one"><a href="#tab2s_2">週Ｋ</a></li>
+                                <li class="one"><a href="#tab2s_3">月Ｋ</a></li>
+                                <li class="one"><a href="#tab2s_4">力道Ｋ</a></li>
+                                <li class="one"><a href="#tab2s_5">布林通道</a></li>
+                                <li class="b one"><a href="#tab2s_6">布林通道2倍</a></li>
+                                <li class="b one"><a href="#tab2s_7">布林通道3倍</a></li>
+                                <li class="no">平均成交量 ▾
+                                     <ul class="noul">
+                                          <li><a href="#tab2s_8">5</a></li>
+                                          <li><a href="#tab2s_9">10</a></li>
+                                          <li><a href="#tab2s_10">20</a></li>
+                                          <li><a href="#tab2s_11">60</a></li>
+                                     </ul>
+                                </li>
+                                <li class="no">RSI ▾
+                                    <ul class="noul">
+                                      <li><a href="#tab2s_12">3</a></li>
+                                      <li><a href="#tab2s_13">5</a></li>
+                                      <li><a href="#tab2s_14">6</a></li>
+                                      <li><a href="#tab2s_15">10</a></li>
+                                    </ul>
+                                </li>
+                                <li class="no">KD ▾
+                                    <ul class="noul">
+                                      <li><a href="#tab2s_16">K5</a></li>
+                                      <li><a href="#tab2s_17">D5</a></li>
+                                      <li><a href="#tab2s_18">K9</a></li>
+                                      <li><a href="#tab2s_19">D9</a></li>
+                                    </ul>
+                                </li>
+                                <li class="no">威廉指標 ▾
+                                    <ul class="noul">
+                                      <li><a href="#tab2s_20">9</a></li>
+                                      <li><a href="#tab2s_21">20</a></li>
+                                    </ul>
+                                </li>
+                                <li class="no">SMA ▾
+                                    <ul class="noul b">
+                                      <li><a href="#tab2s_22">短期(3,6)</a></li>
+                                      <li ><a href="#tab2s_23">短期(5,10,20)</a></li>
+                                      <li><a href="#tab2s_24">短期(60,.120,240)</a></li>
+                                      <li><a href="#tab2s_25">全部(5,10,20,60,120,240)</a></li>
+                                    </ul>
+                                </li>
+                                <li class="no">EMA ▾
+                                    <ul class="noul b">
+                                      <li><a href="#tab2s_26">短期(3,6)</a></li>
+                                      <li><a href="#tab2s_27">短期(5,10,20)</a></li>
+                                      <li><a href="#tab2s_28">短期(60,.120,240)</a></li>
+                                      <li><a href="#tab2s_29">全部(5,10,20,60,120,240)</a></li>
+                                    </ul>
+                                </li>
+                           </ul>
+                           <ul class="tab2s m">
+                                <li class="no">日Ｋ ▾
+                                     <ul class="noul">
+                                          <li><a href="#tab2s_1">日Ｋ</a></li>
+                                          <li><a href="#tab2s_2">週Ｋ</a></li>
+                                          <li><a href="#tab2s_3">月Ｋ</a></li>
+                                     </ul>
+                                </li>
+                                <li class="no">力道Ｋ ▾
+                                     <ul class="noul">
+                                          <li><a href="#tab2s_4">力道Ｋ</a></li>
+                                          <li><a href="#tab2s_5">布林通道</a></li>
+                                          <li><a href="#tab2s_6">布林通道2倍</a></li>
+                                          <li><a href="#tab2s_7">布林通道3倍</a></li>
+                                     </ul>
+                                </li>
+                                <li class="no">平均成交量 ▾
+                                     <ul class="noul">
+                                          <li><a href="#tab2s_8">5</a></li>
+                                          <li><a href="#tab2s_9">10</a></li>
+                                          <li><a href="#tab2s_10">20</a></li>
+                                          <li><a href="#tab2s_11">60</a></li>
+                                     </ul>
+                                </li>
+                                <li class="no">RSI ▾
+                                    <ul class="noul">
+                                      <li><a href="#tab2s_12">3</a></li>
+                                      <li><a href="#tab2s_13">5</a></li>
+                                      <li><a href="#tab2s_14">6</a></li>
+                                      <li><a href="#tab2s_15">10</a></li>
+                                    </ul>
+                                </li>
+                                <li class="no">KD ▾
+                                    <ul class="noul">
+                                      <li><a href="#tab2s_16">K5</a></li>
+                                      <li><a href="#tab2s_17">D5</a></li>
+                                      <li><a href="#tab2s_18">K9</a></li>
+                                      <li><a href="#tab2s_19">D9</a></li>
+                                    </ul>
+                                </li>
+                                <li class="no">威廉指標 ▾
+                                    <ul class="noul">
+                                      <li><a href="#tab2s_20">9</a></li>
+                                      <li><a href="#tab2s_21">20</a></li>
+                                    </ul>
+                                </li>
+                                <li class="no">SMA ▾
+                                    <ul class="noul b">
+                                      <li><a href="#tab2s_22">短期(3,6)</a></li>
+                                      <li ><a href="#tab2s_23">短期(5,10,20)</a></li>
+                                      <li><a href="#tab2s_24">短期(60,.120,240)</a></li>
+                                      <li><a href="#tab2s_25">全部(5,10,20,60,120,240)</a></li>
+                                    </ul>
+                                </li>
+                                <li class="no">EMA ▾
+                                    <ul class="noul b">
+                                      <li><a href="#tab2s_26">短期(3,6)</a></li>
+                                      <li><a href="#tab2s_27">短期(5,10,20)</a></li>
+                                      <li><a href="#tab2s_28">短期(60,.120,240)</a></li>
+                                      <li><a href="#tab2s_29">全部(5,10,20,60,120,240)</a></li>
+                                    </ul>
+                                </li>
+                           </ul>              
+                           <div class="row5_2 pc">
+                               <div class="left">
+                                    <span class="price">9889.00</span>
+                                    <p>
+                                        <span class="chg">▼-70.00</span>
+                                        <span class="chg">-0.70%</span>
+                                    </p>    
+                                </div>
+                               <ul class="right">
+                                        <li name="day"><span>2017/05/08</span></li>
+                                        <li name="Open">開<span>9946.00</span></li>
+                                        <li name="High">高<span>9951.00</span></li>
+                                        <li name="Low">低<span>9879.00</span></li>
+                                        <li name="Last">收<span>9959.00</span></li>
+                                        <li name="Volume" class="data">量<span>60,138</span></li>
+                                        <li>5日<span>9925.40</span></li>
+                                        <li>10日<span>9868.20</span></li>
+                                        <li>20日<span>9807.95</span></li>
+                                        <li>60日<span>9786.67</span></li>
+                                        <li>120日<span>9513.83</span></li>
+                                        <li>240日<span>9194.08</span></li>
+                                 </ul>
+                           </div>
+                           <div class="row5_2 m">
+                               <table  cellpadding="0" cellspacing="0">
+                                   <tr>
+                                       <th class="t">時</th>
+                                       <th>開</th>
+                                       <th>高</th>
+                                       <th>低</th>
+                                       <th>收</th>
+                                       <th class="b">量</th>
+                                   </tr>
+                                   <tr>
+                                       <td class="t y">05/09</td>
+                                       <td>9946.00</td>
+                                       <td>9951.00</td>
+                                       <td>9879.00</td>
+                                       <td>9959.00</td>
+                                       <td class="b y">601億</td>
+                                   </tr>
+                               </table>
+                           </div>    
+                           <div class="tab2_container">
+                                        <div id="tab2s_1" class="tab_content">日Ｋ</div>
+                                        <div id="tab2s_2" class="tab_content">週Ｋ</div>
+                                        <div id="tab2s_3" class="tab_content">月Ｋ</div>
+                                        <div id="tab2s_4" class="tab_content">力道Ｋ線</div>
+                                        <div id="tab2s_5" class="tab_content">布林通道</div>
+                                        <div id="tab2s_6" class="tab_content">布林通道2倍</div>
+                                        <div id="tab2s_7" class="tab_content">布林通道3倍</div>
+                                        <div id="tab2s_8" class="tab_content">5</div>
+                                        <div id="tab2s_9" class="tab_content">10</div>
+                                        <div id="tab2s_10" class="tab_content">20</div>
+                                        <div id="tab2s_11" class="tab_content">60</div>
+                                        <div id="tab2s_12" class="tab_content">R3</div>
+                                        <div id="tab2s_13" class="tab_content">R5</div>
+                                        <div id="tab2s_14" class="tab_content">R6</div>
+                                        <div id="tab2s_15" class="tab_content">R10</div>
+                                        <div id="tab2s_16" class="tab_content">K5</div>
+                                        <div id="tab2s_17" class="tab_content">D5</div>
+                                        <div id="tab2s_18" class="tab_content">K9</div>
+                                        <div id="tab2s_19" class="tab_content">D9</div>
+                                        <div id="tab2s_20" class="tab_content">9</div>
+                                        <div id="tab2s_21" class="tab_content">20</div>
+                                        <div id="tab2s_22" class="tab_content">S短期(3,6)</div>
+                                        <div id="tab2s_23" class="tab_content">S短期(5,10,20)</div>
+                                        <div id="tab2s_24" class="tab_content">S短期(60,.120,240)</div>
+                                        <div id="tab2s_25" class="tab_content">S全部(5,10,20,60,120,240)</div>
+                                        <div id="tab2s_26" class="tab_content">E短期(3,6)</div>
+                                        <div id="tab2s_27" class="tab_content">E短期(5,10,20)</div>
+                                        <div id="tab2s_28" class="tab_content">E短期(60,.120,240)</div>
+                                        <div id="tab2s_29" class="tab_content">E全部(5,10,20,60,120,240)</div>
+
+                                    </div>
+                       </div>
+                   </div>
+                </li>
+                <li id="tab2" class="tab3_content">
+                    <div class="row6">
+                        <div class="left">
+                            <h3>台指期(WTX&)商品契約</h3>
+                            <div class="content">
+                                <table cellpadding="0" cellspacing="0" class="tb tbhl">
+                <tr>
+                    <th width="20%">項目</th>
+                    <th>內容</th>
+                </tr>
+                <tr>
+                    <td>交易標的</td>
+                    <td><a href="http://www.taifex.com.tw/chinese/2/9_7.asp" target="_blank">臺灣證券交易所發行量加權股價指數</a></td>
+                </tr>
+                <tr>
+                    <td>中文簡稱</td>
+                    <td>臺股期貨</td>
+                </tr>
+                <tr>
+                    <td>英文代碼</td>
+                    <td>TX</td>
+                </tr>
+                <tr>
+                    <td>交易時間</td>
+                    <td>
+                        <ul>
+                            <li>本契約交易日同臺灣證券交易所交易日</li>
+                            <li>交易時間為營業日上午8:45~下午1:45</li>
+                            <li>到期月份契約最後交易日之交易時間為上午8:45 ~ 下午1:30</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>契約價值</td>
+                    <td>臺股期貨指數乘上新臺幣200元</td>
+                </tr>
+                <tr>
+                    <td>到期月份</td>
+                    <td>自交易當月起連續二個月份，另加上三月、六月、九月、十二月中三個接續的季月，總共有五個月份的契約在市場交易</td>
+                </tr>
+                <tr>
+                    <td>每日結算價</td>
+                    <td>每日結算價原則上採當日收盤前1分鐘內所有交易之成交量加權平均價，若無成交價時，則依本公司「<a href="http://www.taifex.com.tw/chinese/6/trade/trade_1_1.doc" target="_blank">臺灣證券交易所股價指數期貨契約交易規則</a>」訂定之</td>
+                </tr>
+                <tr>
+                    <td>每日漲跌幅</td>
+                    <td>最大漲跌幅限制為前一營業日結算價上下10%</td>
+                </tr>
+                <tr>
+                    <td>最小升降單位</td>
+                    <td>指數1點（相當於新臺幣200元）</td>
+                </tr>
+                <tr>
+                    <td>最後交易日</td>
+                    <td>各契約的最後交易日為各該契約交割月份第三個星期三，其次一營業日為新契約的開始交易日</td>
+                </tr>
+                <tr>
+                    <td>最後結算日</td>
+                    <td>最後結算日同最後交易日</td>
+                </tr>
+                <tr>
+                    <td>最後結算價</td>
+                    <td>以最後結算日臺灣證券交易所當日交易時間收盤前三十分鐘內所提供標的指數之簡單算術平均價訂之。其計算方式，由本公司另訂之</td>
+                </tr>
+                <tr>
+                    <td>交割方式</td>
+                    <td>以現金交割，交易人於最後結算日依最後結算價之差額，以淨額進行現金之交付或收受</td>
+                </tr>
+                <tr>
+                    <td>部位限制</td>
+                    <td>
+                        <ul>
+                            <li>交易人於任何時間持有本契約同一方之未了結部位總和，不得逾<a href="http://www.taifex.com.tw/chinese/4/pl-non-EquityProducts.asp" target="_blank">本公司公告之限制標準</a></li>
+                            <li>法人機構基於避險需求得向本公司申請放寬部位限制</li>
+                            <li>綜合帳戶，除免主動揭露個別交易人者適用法人部位限制外，持有部位不受本公司公告之部位限制</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>保證金</td>
+                    <td>
+                        <ul>
+                            <li>期貨商向交易人收取之交易保證金及保證金追繳標準，不得低於本公司公告之原始保證金及維持保證金水準</li>
+                            <li>本公司公告之原始保證金及維持保證金，以「<a href="http://www.taifex.com.tw/chinese/6/clear/clear_4.doc" target="_blank">臺灣期貨交易所結算保證金收取方式及標準</a>」計算之結算保證金為基準，按本公司訂定之成數加成計算之</li>
+                        </ul>
+                    </td>
+                </tr>
+        </table>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="r1">
+                                <div class="hd">
+                                    <h3>指數期貨近月行情表</h3>
+                                    <span class="more"><a href="" class="more">更多</a></span>
+                                </div>
+                                <div class="content">
+                                    <table cellpadding="0" cellspacing="0" class="tb tbhl">
+            <tr>
+                <th>名稱</th>
+                <th>成交價</th>
+                <th>漲跌</th>
+                <th>漲幅%</th>
+                <th>成交量</th>
+            </tr>
+                <tr>
+                    <td class="cn"><a href="/global/stockindex?StockNo=WTX%26" target="_blank">台指期</a></td>
+                    <td>9938.00</td>
+                    <td>▲17.00</td>
+                    <td>0.17</td>
+                        <td>121,899</td>
+                </tr>
+                <tr>
+                    <td class="cn"><a href="/global/stockindex?StockNo=WMT%26" target="_blank">小台期</a></td>
+                    <td>9937.00</td>
+                    <td>▲16.00</td>
+                    <td>0.16</td>
+                        <td>81,654</td>
+                </tr>
+                <tr>
+                    <td class="cn"><a href="/global/stockindex?StockNo=WTF%26" target="_blank">金融期</a></td>
+                    <td>1103.60</td>
+                    <td>▼-3.00</td>
+                    <td>-0.27</td>
+                        <td>3,055</td>
+                </tr>
+                <tr>
+                    <td class="cn"><a href="/global/stockindex?StockNo=WTE%26" target="_blank">電子期</a></td>
+                    <td>416.85</td>
+                    <td>▲2.80</td>
+                    <td>0.68</td>
+                        <td>2,948</td>
+                </tr>
+    </table>
+                                </div>
+                            </div>
+                            <div class="r2">
+                                <div class="hd">
+                                    <h3>台指選近月價平行情表</h3>
+                                    <span class="more"><a href="" class="more">更多</a></span>
+                                </div>
+                                <div class="content">
+                                    <table cellpadding="0" cellspacing="0" class="tb tbhl">
+            <tr>
+                <th>買賣權</th>
+                <th>履約價</th>
+                <th>成交價</th>
+                <th>漲跌</th>
+                <th>漲跌%</th>
+            </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>100</td>
+                    <td>95.00</td>
+                    <td>▲8.00</td>
+                    <td>▲9.20</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>100</td>
+                    <td>173.00</td>
+                    <td>▼-5.00</td>
+                    <td>▼-2.81</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>102</td>
+                    <td>35.00</td>
+                    <td>▲3.50</td>
+                    <td>▲11.11</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>102</td>
+                    <td>315.00</td>
+                    <td>▼-3.00</td>
+                    <td>▼-0.94</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>110</td>
+                    <td>1.20</td>
+                    <td>▲0.30</td>
+                    <td>▲33.33</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>980</td>
+                    <td>207.00</td>
+                    <td>▲9.00</td>
+                    <td>▲4.55</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>980</td>
+                    <td>82.00</td>
+                    <td>▼-9.00</td>
+                    <td>▼-9.89</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>990</td>
+                    <td>144.00</td>
+                    <td>▲10.00</td>
+                    <td>▲7.46</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>990</td>
+                    <td>119.00</td>
+                    <td>▼-4.00</td>
+                    <td>▼-3.25</td>
+                </tr>
+    </table>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </li>
+                <li id="tab3" class="tab3_content">
+                    <div class="row7">
+                        <div class="left">
+                            <div class="hd">
+                                <h3>台指期(WTX&amp;)相關新聞</h3>
+                                <span class="more"><a href="" class="more">更多</a></span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <time title="2017-01-04 10:35">01月<b>04</b>10:35</time>
+                                    <p>
+                                        <a href="/News/Content/Index?id=536719">《光電股》漢磊入主，嘉晶營運吃補</a>
+                                        <span>嘉晶(3016)去年與漢磊晶圓換股合併，積極投入節能用高毛利半導體，產品組合改善，有助其營運表現；嘉..</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <time title="2016-04-25 10:47">04月<b>25</b>10:47</time>
+                                    <p>    
+                                        <a href="/News/Content/Index?id=393952">《半導體》嘉晶轉型成功，營收股價爆衝</a>
+                                        <span>嘉晶股價今年自2月中因漢微科（3658）大股東漢民集團旗下的漢磊投控（3707）經營團隊正式入主，股..</span>
+                                    </p>    
+                                </li>
+                                <li>
+                                    <time  title="2016-03-31 18:00">03月<b>31</b>18:00</time>
+                                    <p>
+                                        <a href="/News/Content/Index?id=381476">嘉晶:公告本公司財務及會計主管異動</a>
+                                        <span>【 鉅亨網 新聞中心】 第二條第8款  1.人員變動別（請輸入發言人、代理發言人、重要營運主管(如:執行長、營運長、行銷長及策略長等)、財務主管、會計主管、研..</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <time  title="2016-03-24 15:40">03月<b>24</b>15:40</time>
+                                    <p>
+                                        <a href="/News/Content/Index?id=376630">嘉晶:代重要子公司日本嘉晶電子株式會社公告105年股東常會重要決議事項</a>
+                                        <span>【 鉅亨網 新聞中心】 第二條第18款  1.股東常會日期:105/03/242.重要決議事項:(一)通過承認104年度營業報告書及財務報表案。(二)通過10..</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <time title="2016-03-22 18:40">03月<b>22</b>18:40</time>
+                                    <p>
+                                        <a href="/News/Content/Index?id=374667">嘉晶:公告本公司財務及會計主管異動</a>
+                                        <span>【 鉅亨網 新聞中心】 第二條第8款  1.人員變動別（請輸入發言人、代理發言人、重要營運主管(如:執行長、營運長、行銷長及策略長等)、財務主管、會計主管、研..</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <time title="2016-03-22 18:40">03月<b>22</b>18:40</time>
+                                    <p><a href="/News/Content/Index?id=374661">嘉晶:公告本公司不分派員工及董監酬勞</a>
+                                        <span>【 鉅亨網 新聞中心】 第二條第49款  1.事實發生日:105/03/222.公司名稱:嘉晶電子股份有限公司3.與公司關係(請輸入本公司或子公司):本公司4..</span></p>
+                                </li>
+                                <li>
+                                    <time  title="2016-03-22 18:00">03月<b>22</b>18:00</time>
+                                    <p><a href="/News/Content/Index?id=374604">嘉晶:公告本公司董事會決議召開105年股東常會日期及相關事宜</a>
+                                        <span>【 鉅亨網 新聞中心】 第二條第17款  1.董事會決議日期:105/03/222.股東會召開日期:105/06/163.股東會召開地點:新竹科學工業園區創新..</span></p>
+                                </li>  
+                        </ul>
+                        </div>
+                        <div class="right">
+                            <div class="r1">
+                                <div class="hd">
+                                    <h3>指數期貨近月行情表</h3>
+                                    <span class="more"><a href="" class="more">更多</a></span>
+                                </div>
+                                <div class="content">
+                                    <table cellpadding="0" cellspacing="0" class="tb tbhl">
+            <tr>
+                <th>名稱</th>
+                <th>成交價</th>
+                <th>漲跌</th>
+                <th>漲幅%</th>
+                <th>成交量</th>
+            </tr>
+                <tr>
+                    <td class="cn"><a href="/global/stockindex?StockNo=WTX%26" target="_blank">台指期</a></td>
+                    <td>9938.00</td>
+                    <td>▲17.00</td>
+                    <td>0.17</td>
+                        <td>121,899</td>
+                </tr>
+                <tr>
+                    <td class="cn"><a href="/global/stockindex?StockNo=WMT%26" target="_blank">小台期</a></td>
+                    <td>9937.00</td>
+                    <td>▲16.00</td>
+                    <td>0.16</td>
+                        <td>81,654</td>
+                </tr>
+                <tr>
+                    <td class="cn"><a href="/global/stockindex?StockNo=WTF%26" target="_blank">金融期</a></td>
+                    <td>1103.60</td>
+                    <td>▼-3.00</td>
+                    <td>-0.27</td>
+                        <td>3,055</td>
+                </tr>
+                <tr>
+                    <td class="cn"><a href="/global/stockindex?StockNo=WTE%26" target="_blank">電子期</a></td>
+                    <td>416.85</td>
+                    <td>▲2.80</td>
+                    <td>0.68</td>
+                        <td>2,948</td>
+                </tr>
+    </table>
+                                </div>
+                            </div>
+                            <div class="r2">
+                                <div class="hd">
+                                    <h3>台指選近月價平行情表</h3>
+                                    <span class="more"><a href="" class="more">更多</a></span>
+                                </div>
+                                <div class="content">
+                                    <table cellpadding="0" cellspacing="0" class="tb tbhl">
+            <tr>
+                <th>買賣權</th>
+                <th>履約價</th>
+                <th>成交價</th>
+                <th>漲跌</th>
+                <th>漲跌%</th>
+            </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>100</td>
+                    <td>95.00</td>
+                    <td>▲8.00</td>
+                    <td>▲9.20</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>100</td>
+                    <td>173.00</td>
+                    <td>▼-5.00</td>
+                    <td>▼-2.81</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>102</td>
+                    <td>35.00</td>
+                    <td>▲3.50</td>
+                    <td>▲11.11</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>102</td>
+                    <td>315.00</td>
+                    <td>▼-3.00</td>
+                    <td>▼-0.94</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>110</td>
+                    <td>1.20</td>
+                    <td>▲0.30</td>
+                    <td>▲33.33</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>980</td>
+                    <td>207.00</td>
+                    <td>▲9.00</td>
+                    <td>▲4.55</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>980</td>
+                    <td>82.00</td>
+                    <td>▼-9.00</td>
+                    <td>▼-9.89</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>990</td>
+                    <td>144.00</td>
+                    <td>▲10.00</td>
+                    <td>▲7.46</td>
+                </tr>
+                <tr>
+                    <td>PUT</td>
+                    <td>990</td>
+                    <td>119.00</td>
+                    <td>▼-4.00</td>
+                    <td>▼-3.25</td>
+                </tr>
+    </table>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </li>
+            </ul>    
+        </div>    
+    </div>
+    <footer></footer>
+    
+<script>
+    /*BIG*/
+    $(function(){
+		// 預設顯示第一個 Tab
+		var _showTab = 0;
+		$('.BIG').each(function(){
+			// 目前的頁籤區塊
+			var $tab = $(this);
+
+			var $defaultLi = $('.row3 li', $tab).eq(_showTab).addClass('active');
+			$($defaultLi.find('a').attr('href')).siblings().hide();
+			
+			// 當 li 頁籤被點擊時...
+			// 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
+			$('.row3 li', $tab).click(function() {
+				// 找出 li 中的超連結 href(#id)
+				var $this = $(this),
+					_clickTab = $this.find('a').attr('href');
+				// 把目前點擊到的 li 頁籤加上 .active
+				// 並把兄弟元素中有 .active 的都移除 class
+				$this.addClass('active').siblings('.active').removeClass('active');
+				// 淡入相對應的內容並隱藏兄弟元素
+				$(_clickTab).stop(false, true).fadeIn().siblings().hide();
+
+				return false;
+			}).find('a').focus(function(){
+				this.blur();
+			});
+		});
+	});
+    /*l1*/
+    $(function(){
+		// 預設顯示第一個 Tab
+		var _showTab = 0;
+		$('.l1').each(function(){
+			// 目前的頁籤區塊
+			var $tab = $(this);
+
+			var $defaultLi = $('.tabs1 li', $tab).eq(_showTab).addClass('active');
+			$($defaultLi.find('a').attr('href')).siblings().hide();
+			
+			// 當 li 頁籤被點擊時...
+			// 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
+			$('.tabs1 li', $tab).click(function() {
+				// 找出 li 中的超連結 href(#id)
+				var $this = $(this),
+					_clickTab = $this.find('a').attr('href');
+				// 把目前點擊到的 li 頁籤加上 .active
+				// 並把兄弟元素中有 .active 的都移除 class
+				$this.addClass('active').siblings('.active').removeClass('active');
+				// 淡入相對應的內容並隱藏兄弟元素
+				$(_clickTab).stop(false, true).fadeIn().siblings().hide();
+
+				return false;
+			}).find('a').focus(function(){
+				this.blur();
+			});
+		});
+	});
+    /*down_2*/
+    $(function(){
+		// 預設顯示第一個 Tab
+		var _showTab = 0;
+		$('.down_2').each(function(){
+			// 目前的頁籤區塊
+			var $tab = $(this);
+
+			var $defaultLi = $('.tab2s li', $tab).eq(_showTab).addClass('active');
+			$($defaultLi.find('a').attr('href')).siblings().hide();
+			
+			// 當 li 頁籤被點擊時...
+			// 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
+			$('.tab2s li', $tab).click(function() {
+				// 找出 li 中的超連結 href(#id)
+				var $this = $(this),
+					_clickTab = $this.find('a').attr('href');
+				// 把目前點擊到的 li 頁籤加上 .active
+				// 並把兄弟元素中有 .active 的都移除 class
+				$this.addClass('active').siblings('.active').removeClass('active');
+				// 淡入相對應的內容並隱藏兄弟元素
+				$(_clickTab).stop(false, true).fadeIn().siblings().hide();
+
+				return false;
+			}).find('a').focus(function(){
+				this.blur();
+			});
+		});
+	});
+    /*row5 tab2s*/
+    $('.tab2s.m .no:first-child').addClass('active');
+    $('.no').click(function(){
+        $(this).find('.noul').slideToggle();
+        $(this).siblings('.no').find('.noul').slideUp();
+    });
+    $('.noul li').click(function(){
+        $(this).parent('.noul').slideUp();
+    });
+    $('.tab2s li.one').click(function(){
+        $('.noul').slideUp();
+    });
+</script>    
+</body>
+</html>

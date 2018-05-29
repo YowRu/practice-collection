@@ -1,0 +1,54 @@
+.agentWP{display: flex;min-height:600px;}
+    .agentWP .left{width: 65%;}
+    .agentWP .left .l1{padding: 20px;border: 1px solid #ddd;background: -webkit-linear-gradient(#f3f3f3,#ddd);background: linear-gradient(#f3f3f3,#ddd);}
+    .agentWP .left p{color: #333;font-size: 1rem;font-weight: normal;}
+    .agentWP .left .row1,.agentWP .left .row2{display: flex;justify-content: center;align-items: center;height: 40px;}
+    .agentWP .left select,.agentWP .left input{margin: 0 1%;-webkit-appearance: none;  -moz-appearance: none; appearance: none;background: -webkit-linear-gradient(#fdfdfd, #f3f3f3);background: linear-gradient(#fdfdfd, #f3f3f3); border: 1px solid #ddd;border-bottom-color: #bbb;border-radius: 2px;height: 32px; }
+    .agentWP .left .row1 select:nth-of-type(1){width:50px;}
+    .agentWP .left .row1 select:nth-of-type(2){padding: 0 5px;box-sizing: border-box;width: 100px;}
+    .agentWP .left .row2 select:nth-of-type(1){width: 50px;padding:0 5px;box-sizing: border-box; }
+    .agentWP .left input{padding: 0 5px;box-sizing: border-box;width:80px;}
+    .agentWP .left .hd_sm{ height: 40px;line-height: 40px; padding: 0 5px;box-sizing: border-box; background: -webkit-linear-gradient(#fdfdfd, #f3f3f3);background: linear-gradient(#fdfdfd, #f3f3f3); border: 1px solid #ddd;border-bottom-color: #bbb;border-radius: 2px;margin-top: 10px;}
+    .agentWP .left span.bn,.agentWP .left span.r{color: #f4564a;}
+    .agentWP .left a.sn{color: #555;}
+    .agentWP .left table.tb tr{line-height: 32px;}
+    .agentWP .left table.tb tr td{border-bottom: 1px solid #e3e3e3;border-right: 1px solid #e3e3e3;}
+    .agentWP .left table.tb tr th:nth-of-type(1),.agentWP .left table.tb tr td:nth-of-type(1){border-left: 1px solid #e3e3e3;}
+    .agentWP .right{width: 34%;margin-left: 1%;}
+    .btn{height: 26px; padding: 1px 3px;box-sizing: border-box;color: #1B6393; border: 1px solid #1B6393;background: -webkit-linear-gradient(#fdfdfd, #f3f3f3);background: linear-gradient(#fdfdfd, #f3f3f3);}
+    .hd{display: flex;justify-content: space-between;align-items: center; height: 40px;padding: 0 5px;box-sizing: border-box; background: -webkit-linear-gradient(#fdfdfd, #f3f3f3);background: linear-gradient(#fdfdfd, #f3f3f3); border: 1px solid #ddd;border-bottom-color: #bbb;border-radius: 2px;}
+    .hd h1{font-size: 1rem;color: #444;}
+    .agentWP .right .hd h3{font-size: 1rem; color: #444;font-weight: normal;}
+    .agentWP .right .hd span,.agentWP .right .hd p{font-size: 13px; color: #666;}  
+    .agentWP .right table.tb tr th{line-height:22px;}
+    .agentWP .right table.tb tr td{text-align: left;padding-left:15px;box-sizing: border-box;border-right:1px solid #ddd;border-bottom:  1px solid #ddd;}
+.agentWP .right table.tb tr td:last-child{border-right:0;}
+.agentWP .right table.tb .tal{height: 30px;line-height: 30px;background-color: #eee;}
+.agentWP .right table.tb .tal .t{text-align: right;padding-right: 10px;box-sizing: border-box;}
+    .r4 .richtool,.r5 .writer{padding:5px;}
+    .r4 .richtool li,.r5 .writer li{padding: 5px 0;transition: all 0.5s;}
+    .r4 .richtool li:hover, .r5 .writer li:hover{background-color:  rgba(255, 255, 224,0.5);}
+    .r4 .richtool li a{display: flex;justify-content: flex-start;}
+    .r4 .richtool li a img{border-radius: 7px;}
+    .r4 .richtool li a div{margin-left: 10px;overflow: hidden;width: 100%;color: #444;}
+    .r4 .richtool li a div h2{font-size: 1rem;color: #0E2A8C;font-weight: normal;}
+    .r4 .richtool li a div p{float: left;margin-top: 5px;line-height: 20px;}
+    .r4 .richtool li a div p:nth-of-type(2){margin-left: 10px;}
+    .r4 .richtool li a div p:last-child{margin-top: 3px; overflow: hidden;white-space: nowrap;width: 98%;height: 20px;text-overflow: ellipsis;}
+    .r4 .richtool li a div p:nth-of-type(1) span{font-size: 14px;color: #2a4298;}
+    .r4 .richtool li a div p:nth-of-type(2) span{font-size: 14px;color: #f4564a;}
+    .r5 .class img{width: 98%;margin: 10px 5px auto;height: 240px;}
+    
+     @media(max-width:900px){
+        .agentWP {flex-direction: column;}
+        .agentWP .left{width:100%;margin: 0;}
+        .agentWP .right{display: none;}
+    }
+    @media(max-width:519px){
+        .agentWP .left p{font-size: 14px;}
+    }
+    @media(max-width:500px){#main{margin-top: 40px;}}
+    @media(max-width:484px){
+        .agentWP .left input,.btn,.row2 p:nth-of-type(2),span.to{display: none;}
+        .agentWP .left .l1{padding: 30px 5px;}
+    }

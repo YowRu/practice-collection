@@ -1,0 +1,80 @@
+    .green {color:#1ca208;}
+    .red {color:#d40001 ;}
+    #twstock_WP{height: 830px;overflow-y: scroll;}
+    #twstock_WP .hd .tabs{display: flex;width: 100%;display: flex;justify-content: flex-start;background: -webkit-linear-gradient(#fdfdfd, #f3f3f3);background: linear-gradient(#fdfdfd, #f3f3f3); border: 1px solid #ddd;border-bottom-color: #bbb;border-radius: 2px;}
+    #twstock_WP .tabs li { display: inline-block; width:56px;height: 36px;line-height:36px;text-align: center;border-right:1px solid rgba(187, 187, 187, 0.21); } 
+    #twstock_WP .tabs li a{display:inline-block;width:98%;background-color: transparent;color: #444;font-size: 1rem;font-weight:normal;cursor: pointer;}
+    #twstock_WP .tabs li:hover{border-bottom:2px solid #f44336;}
+    #twstock_WP .tabs li:hover a{color:#f44336;}
+    #twstock_WP .tabs li.active {background-color:#f44336;color: #fff;border-bottom:2px solid #f44336;box-shadow: none;}
+    #twstock_WP .tabs li.active a{color: #fff;}
+    #twstock_WP .tab_container{width: 100%;height:100%;overflow-y:scroll; background: #fff;display: flex;justify-content: flex-start;}
+    #twstock_WP .tab_content{width:100%;height:100%;}
+    #twstock_WP .tab_content article ul{width:100%;display: flex;justify-content: flex-start; flex-wrap: wrap;background-color: #fff;}
+    #twstock_WP .tab_container .tab_content article ul li {width: 18%;height:230px; margin: 1%;cursor: pointer;}
+#twstock_WP .tab_container .tab_content article ul li:hover h1{text-decoration: underline;color:#f44336; }    
+#twstock_WP .tab_container .tab_content article ul li h1{color:#022F5A;font-size: 1.2rem;}
+    #twstock_WP .tab_container .tab_content article ul li p{font-size: 1rem;font-weight: bold;}
+    #twstock_WP .tab_container #tab1 article ul li div,#twstock_WP .tab_container #tab2 article ul li div{width:100%;height: 180px; background-color: #000;}
+    #twstock_WP .tab_container .tab_content article.EFT{width: 100%;}
+    #twstock_WP .tab_container .tab_content .EFT .tab2s{width: 100%;height: 36px;line-height: 36px; display: flex;justify-content: center;align-items: center;background: -webkit-linear-gradient(#fdfdfd, #f3f3f3);background: linear-gradient(#fdfdfd, #f3f3f3); border: 1px solid #ddd;border-bottom-color: #bbb;border-radius: 2px;}
+    #twstock_WP .tab_container .tab_content .EFT .tab2s li{width: 100px;height: 36px;margin: 0;text-align: center;}
+    #twstock_WP .tab_container .tab_content .EFT .tab2s li:hover{border-bottom:2px solid #f44336;}
+    #twstock_WP .tab_container .tab_content .EFT .tab2s li.active{background-color: #f44336;border-bottom:2px solid #f44336; }
+    #twstock_WP .tab_container .tab_content .EFT .tab2s li.active a{color: #fff; }
+    #twstock_WP .tab_container .tab_content .EFT .tab2s li a{color: #444;text-align: center;}
+    #twstock_WP .tab_container .tab_content .EFT .tab_container2 .tab_content2{width: 100%;}
+    table.tb.tbhl{border-right: 1px solid #e3e3e3;border-left: 1px solid #e3e3e3;}
+    table.tb.tbhl tbody tr:first-child{background: -webkit-linear-gradient(#fdfdfd, #f3f3f3);background: linear-gradient(#fdfdfd, #f3f3f3);border: 1px solid #ddd;border-bottom-color: #bbb;border-radius: 2px;line-height: 36px;}
+    table.tb.tbhl tbody tr{line-height: 30px;}
+    table.tb.tbhl tbody tr th{font-weight: normal;background: -webkit-linear-gradient(#fdfdfd, #f3f3f3);background: linear-gradient(#fdfdfd, #f3f3f3);width: auto;}
+    table.tb.tbhl tbody td{width: auto; text-align: right;padding:3px;box-sizing: border-box;border-top: 1px solid #e3e3e3;}
+    table.tb.tbhl tbody tr:last-child td{border-bottom: 1px solid #e3e3e3;}    
+    table.tb.tbhl tbody td:nth-of-type(1),table.tb.tbhl tbody td:nth-of-type(2){text-align: left;}
+    table.tb.tbhl tbody td.add{text-align: center;}
+    table.tb.tbhl tbody td.add .ic-add{font-size: 1rem;color: #1ca208;}
+    table.tb.tbhl tbody td:nth-of-type(1) a,table.tb.tbhl tbody td:nth-of-type(2) a{color: #022F5A ;}
+    .tb th:not(:last-child), .tb td:not(:last-child), .tb-class td:not(:last-child){border-right: 1px solid #f3f3f3;}
+    
+    @media(max-width:1000px){
+        #twstock_WP .tab_container .tab_content article ul li{width: 23%;margin: 1%;}
+    }
+    @media(max-width:750px){
+        #twstock_WP .tab_container .tab_content article ul li{width: 31%;margin: 1%;}
+        #twstock_WP .tab_container .tab_content .EFT table.tb.rw5n{width:120%;}
+        #twstock_WP .tab_container .tab_content .EFT table.tb.rw5n.S{width:100%;}
+        #twstock_WP .tab_container .tab_content .EFT table.tb.rw5n.B{width:150%;}
+        #twstock_WP .tab_container .tab_content .EFT .content{overflow-x: scroll;}
+    }
+@media(max-width:600px){
+    #twstock_WP .tab_container .tab_content .EFT .tab2s li{width: 20%;}
+    #twstock_WP .tab_container .tab_content .EFT .tab2s li a{font-size: 0.9rem;}
+}
+    @media(max-width:550px){
+        #twstock_WP .tab_container .tab_content article ul li{width: 48%;margin: 1% ;}
+        table.tb.tbhl tbody tr th.W{min-width: 52px;}
+        #twstock_WP .tab_container .tab_content .EFT table.tb.rw5n{width:160%;}
+        #twstock_WP .tab_container .tab_content .EFT table.tb.rw5n.S{width:110%;}
+        #twstock_WP .tab_container .tab_content .EFT table.tb.rw5n.B{width:180%;}
+    }
+@media(max-width:500px){#main{margin-top:0px;}}
+@media(max-width:470px){
+        #twstock_WP .tab_container .tab_content .EFT table.tb.rw5n{width:160%;}
+        #twstock_WP .tab_container .tab_content .EFT table.tb.rw5n.B{width:180%;}
+}
+@media(max-width:414px){
+        #twstock_WP .tab_container .tab_content .EFT table.tb.rw5n{width:180%;}
+        #twstock_WP .tab_container .tab_content .EFT table.tb.rw5n.S{width:120%;}
+        #twstock_WP .tab_container .tab_content .EFT table.tb.rw5n.B{width:200%;}
+}
+    @media(max-width:375px){
+        #twstock_WP .tab_container .tab_content article ul li{width:85%;margin: 1% auto;}
+        table.tb.tbhl tbody tr th.w{min-width: 92px;}
+        #twstock_WP .tab_container .tab_content .EFT table.tb.rw5n{width:220%;}
+        #twstock_WP .tab_container .tab_content .EFT table.tb.rw5n.S{width:140%;}
+        #twstock_WP .tab_container .tab_content .EFT table.tb.rw5n.B{width:240%;}
+    }
+
+
+
+

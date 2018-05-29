@@ -1,0 +1,51 @@
+#main{margin-top:80px;}
+.row1{height:180px;text-align:center;background:url(../img/bg/pink2.png) no-repeat right;background-size:contain;padding:40px 0;margin-bottom:40px;
+box-sizing:border-box;}
+.row1 p{width:50%;margin:0 auto;line-height:3rem;color:#777;}
+.r1{padding:20px 0;;background:url(../img/bg/pink1.png) no-repeat left bottom;background-size:contain;}
+.r .wp{max-width:800px;width:100%;margin:0 auto;display:flex;justify-content:center;align-items:center;}
+.r1 .wp .image{text-align:center;width:200px;height:200px;background:url(../img/index/strawberry.jpeg) no-repeat center;background-size:cover;}
+.r1 .wp p{width:40%;line-height:2rem;margin-left:5%;color:#777;}
+a.btn{display:block;width:100px;line-height:2rem;text-align:center;margin:20px auto;border-bottom:2px solid #bca8a8;background-color:#e0d9d9;color:#fff;font-size:1rem;text-decoration:none;} 
+    a.btn:hover{color:#c34444;}
+    
+    .r2>p{text-align: center;color: #777;margin-top:40px;}
+    #main .r2 .wp{display:flex;justify-content:center;align-items:center;margin:20px auto 40px;}
+    .r2 .wp content{margin:20px 10px;}
+    .r2 .wp content img{width:200px;height:200px;}   
+    .r3 .wp{display:block;text-align:center;}
+    .r3 .wp img {width:100%;margin:0 auto;} 
+    .r3 .wp p span{color: #777;}
+    
+    @media(max-width:950px){
+        #main{margin-top:40px;}
+    }
+    @media(max-width:630px){
+        .r2 .wp content{margin:20px 3px;}
+    }
+    @media(max-width:600px){
+        .row1 p{width: 60%;}
+        .r2 .wp content img{width: 160px;height: 160px;}
+    }
+    @media(max-width:500px){
+        .row1 p{width:70%;}
+        .r .wp{flex-direction: column;}
+        .r1 .wp .image,.r2 .wp content img{width: 300px;height: 300px;}
+        .r1 .wp p{width: 60%;margin: 20px auto;}
+        .r1 .wp p span{background-color: rgba(255, 255, 255, 0.5);}
+        .r3 .wp img{width: 120%;}
+        .r3 .wp{overflow:hidden;}
+    }
+    @media(max-width:414px){
+        .r2 .wp content img{width:300px;height: 250px;}
+        .row1 p{width:80%;}
+        .r1 .wp p{width:70%;}
+        .r3 .wp img{width: 150%;}
+    }
+    @media(max-width:375px){
+        .row1 p{width:90%;}
+    }
+    @media(max-width:320px){
+        .r1 .wp p{width:80%;}
+         .row1 p{width:98%;font-size:0.8rem;}
+    }

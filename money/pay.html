@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="keywords" content="17988,鄉民財經,財經,台股,股票,期貨,選擇權,海外期貨,金融,賺錢,技術分析,理財,投資,個股,選股,大盤,盤勢" /><meta name="description" content="我們是一個擁有財經知識、專業分析師、影音與軟體的網路學習網站，提供多項線上即時服務，讓使用者自行選擇影音教學、軟體操作或分析師講座，從豐富的線上資料庫，輕鬆入門或進階學習，協助大眾精確而有效率的進修投資理財知識。" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/loading.js"></script>
+    <link rel="stylesheet" href="icon/font/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/1080layout.css" type="text/css">
+    <link rel="stylesheet" href="css/1080index.css" type="text/css">
+    <link rel="stylesheet" href="css/pay.css">
+     <script src="js/TWzipcode/jquery.twzipcode.min.js"></script>
+     <style>
+    /*暫時*/
+    h5{text-align: center; color:palevioletred;font-size: 2rem;padding: 50px 0;}    
+    .opacity5{ opacity: 0.5; color: red; width: 80px; }
+    </style>
+     
+     
+    <title>訂單確認 | 鄉民財經</title>
+</head>
+<body>
+        <!-- 很大的FORM ============================================================ 紀錄 -->
+    <form action="" method="POST" name="payForm" >
+       <h1>訂單資料</h1> 
+       <ul>
+           <li> 
+               <img src="" alt="" width="95" height="130" class="img">
+               <h3></h3>
+           </li>
+           <li>售價＄<span class="unitPrice">__</span>元</li>
+           <li>數量
+               <select size="1" name="prod_count" class="prod_count">
+             </select>  
+           </li>
+       </ul>          
+       <div id="buyer">
+           <h2>訂購人資料</h2>
+           <ul>
+               <li>
+                   <h3>收件姓名</h3>
+                   <input type="text" style="color: Black;" name="shop_name" value="" >
+               </li>
+               <li>
+                   <h3>行動電話</h3>
+                   <input type="text" style="color: Black;" class="input-mobile" name="shop_mbphone" value="" >
+               </li>
+               <li class="address">
+                   <h3>收件地址</h3>
+                   <div id="twzipcode"></div>
+                   <input type="text" name="shop_address" id="address" placeholder="請輸入完整地址..." required  value="">
+               </li>
+           </ul>
+           
+           <!-- 以下應該是type="hidden" =================================================== -->
+          <input type="hidden" name="shop_date" id="shop_date" 
+              value=" " class="opacity5" readonly>
+
+          <input type="hidden" name="mem_id" id="mem_id" value=" " 
+              class="opacity5" readonly>
+
+          <input type="hidden" name="prod_id" value=" " 
+                 class="opacity5" readonly>  <!-- ,隔開連成字串 -->
+
+          <input type="hidden" name="prod_count" id="prod_count" value="" 
+              class="opacity5" readonly>   <!-- ,隔開連成字串 -->
+
+          <input type="hidden" name="shop_price" id="shop_price" value="" 
+              class="opacity5" readonly>   <!-- ,隔開連成字串 -->
+           <input type="hidden" name="shop_fare" id="shop_fare" value="60" 
+              class="opacity5" readonly>
+          <input type="hidden" name="shop_total" id="shop_total" value="" 
+              class="opacity5" readonly>
+          
+           
+       </div>
+       <section class="payaccount">
+           <h2>付款資訊</h2>
+           <p>匯款帳戶：000 1234 5678 9101</p>
+           <span>♦ 請於購買後七日內完成匯款,超過時間將取消訂單,請重新訂購。</span><br>
+           <span>♦ 收到款項後,三日出貨（不含例假日）。</span>
+       </section>
+       <section class="money">
+            <h4> 小計：$<strong class="subTotal"> </strong>元</h4>
+            <h4> 運費：<strong>$60</strong>元</h4>
+            <h4> 商品總金額：<strong id="total">－</strong>元</h4> 
+       </section>
+       <div class="btn">
+        <!--隱藏訂單編號-->
+         <input type="hidden" style="color: Black;" name="" value="" >
+         <input type="hidden" name="" value="payForm">
+         <input name="button" type="submit"  value="確認結帳" >
+     <!--<a href="">確認結帳</a>-->
+         <a href="onlineshop.html">繼續購物</a>
+       </div> 
+  </form> 
+    
+  <script>
+    $('#twzipcode').twzipcode();
+      $('#twzipcode>input').css('width','50');
+    var $Width = $(window).outerWidth(true);
+      
+    if($Width < 740){$('#twzipcode').css('width','140'); }
+      else{$('#twzipcode').css('width','auto');}
+     
+          
+      $(document).ready(function(){	
+          
+          
+    //所有數量逐一檢查是否修改
+    
+	$(".prod_count").each(function(index, element) {
+		$(element).change(function(){		   
+			var unitPrice_obj  =$(".unitPrice").get(index);   //記錄顯示單價的<span>物件
+			var subtotal_obj   =$(".subTotal").get(index);    //記錄顯示小計的<span>物件
+            var subTotal=$(element).val()*$(unitPrice_obj).text();//計算小計
+         
+			//$(subtotal_obj).text(subTotal);
+            $(subtotal_obj).text(subTotal);
+			totalCount();//計算總金額
+            
+		})
+	});
+	totalCount();
+    
+	//---------------------------------------------------------
+        
+          
+	function totalCount(){
+		$countTotal=60;    //記錄總計金額(有運費)
+		$(".subTotal").each(function(index, element) {
+            $countTotal+=parseInt($(element).text());		         //計算總計金額
+		});
+    
+		$(".unitPrice").each(function(index, element) {
+			if(index==0){
+				$shop_unitPrice=$(element).text();
+			}
+			else{
+				$shop_unitPrice+=","+$(element).text();	 //記錄單價為字串
+			}
+		});
+	
+		$(".prod_count").each(function(index, element) {
+	        if(index==0){
+				$prod_count=$(element).val();
+			}
+			else if(index>0){
+				$prod_count+=","+$(element).val();	  //記錄數量為字串
+			}
+		});		
+		
+		$("#total").text($countTotal);            //總金額的數字填入 #total 畫面顯示的位置
+		$("#prod_count").val($prod_count);     //商品數量的字串填入 #product_count 表單中隱藏欄位的位置
+		$("#shop_price").val($shop_unitPrice);    //商品單價的字串填入 #shop_price 表單中隱藏欄位的位置
+		$("#shop_total").val($countTotal);        //總金額的數字填入 #total 表單中隱藏欄位的位置
+	}
+})
+      
+  
+      
+      
+  </script>    
+</body>
+</html>

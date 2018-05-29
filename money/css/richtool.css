@@ -1,0 +1,91 @@
+    #main{padding-bottom:20px;height:auto;}
+    .row1WP{width:80%;margin:0 auto;margin-top:10px;background-color:#f3f4f6;padding:20px 0;box-sizing:border-box;border-left:4px solid #e34040;}
+    .row1{width: 100%; display:flex;justify-content:space-around;}
+    .row{width:33%; display:flex;flex-direction:column;padding:10px 20px;box-sizing:border-box;text-align:left;cursor: pointer;}
+    .row h1{font-size:1.3rem;color: #0cc6c7;width:100%;text-align:left;transition: all 0.5s;}
+    .row p{font-size: 1.5rem;color: #555;margin:5px 0;transition: all 0.5s;}
+    .row span{color:#555;font-size:1.1rem;width:300px;transition: all 0.5s; }
+    .row:hover h1{color:#396dc3;}
+    .row:hover p,.row:hover span{color:#379392;}
+/*row2*/
+    .row2{width:80%;margin: 0 auto;padding:20px 0;box-sizing:border-box;position: relative;}
+    .row2>h1{width:100%;text-align: center;font-size: 1.8rem;color: #555;}
+    #figure{width:100%; min-height:650px; display:flex;justify-content:flex-start;align-items:flex-start;flex-wrap:wrap;background-size:cover;}
+    #figure a{color: #444;display: inline-block;width: 46%;height:auto;margin:2%;box-shadow: 0px 2px 9px #7c6e6f;position: relative;}
+    #figure a .up{ display:flex;padding:10px;box-sizing: border-box ;border-radius: 5px;}
+    #figure a .up .left{width:75%;display: flex;flex-direction: column;justify-content: space-around;}
+    #figure a .up .left h1{font-size: 1.5rem;font-weight: normal;color:#263959;}
+    #figure a .up .left p{font-size:1rem;color:#555;}
+    #figure a .up .left p span{color: #e34040;} 
+#figure a:hover .up .left h1{color: #e34040;text-decoration: underline;}
+#figure a:hover .up .left p span{color:#1B6393;}
+    #figure a .up .right{width:25%;height: 95px;background-color:#666;}  
+    #figure a .down{height:3.5rem;font-size: 1rem;overflow: hidden;padding:10px;box-sizing: border-box ;margin-top:-10px;display: none;}
+    #figure a .inf{padding:10px;box-sizing: border-box ;border-radius:5px;color: #444; }
+    #figure a .inf p{text-align: center;}
+    #figure a .inf p:nth-of-type(1){margin-bottom: 10px;} 
+/*row3*/
+    .row3{width:80%;margin:30px auto;border-top:5px dotted #fff;background-color:#Fafafa;box-shadow:0px 4px 7px #bbb;}    
+    .row3 h1,.row3 h2{width:100%;text-align:center;padding:10px 0;box-sizing:border-box;color: #396dc3;}
+    .row3 h1{padding-top:30px;font-size:1.8rem;}
+    .row3 h2 span{color: #ffc400;}
+    .all{width: 80%;margin: 0 auto;}
+    .all li{padding: 20px 0;box-sizing: border-box;border-bottom:3px dotted #89d2d3;list-style: decimal;color: #0cc6c7;font-weight:600;}
+    .all li:last-child{border-bottom: 0;}
+    .all li .name{color:#444;font-weight:normal; padding:8px 0;box-sizing: border-box;}
+    .all li .level{color: #333;font-weight:normal;padding:8px 0;box-sizing: border-box;display: inline-block;}
+    .all li .time{color: #333;font-weight:normal;padding:8px 0;box-sizing: border-box;}
+    .all li .time:before{content:' | ';margin: 0 5px; color: #333;}
+    .all li p{font-weight:normal;padding:8px 0;box-sizing: border-box;color: #333;}
+@media(max-width:1150px){
+    .row1WP,.row2,.row3{width:90%;}
+    .row span{width: 100%;}
+}
+@media(max-width:990px){
+    .row1WP,.row2,.row3{width:95%;}
+}
+@media(max-width:930px){
+    .row1WP,.row2,.row3{width:100%;}
+}
+@media(max-width:830px){
+    .row1{justify-content: space-between;}
+    .row{width:32%;padding:30px 20px;}
+}
+@media(max-width:700px){
+    #figure{padding-top: 10px;padding-bottom:20px;box-sizing: border-box;}
+    #figure a{width:80%;margin:3% auto;border: 1px solid #ddd;margin-bottom: 10px;box-shadow:5px 5px 5px #bbb;}
+}
+@media(max-width:600px){
+    .row1 .row span{display: none;}
+}
+@media(max-width:660px){
+    
+    .row{width:32%;padding:30px 15px;}
+    .row:before{border-width: 50px 50px 0 0;}
+}
+@media(max-width:600px){
+    #figure{background-color: #fff;}
+    #figure a{width:85%;}
+    #figure a .up .left h1{font-size: 1.2rem;}
+}
+@media(max-width:500px){
+    .row1WP{display: none;}
+    #main{margin-top: 40px;}
+    #figure a{width:90%;}
+}
+@media(max-width:414px){
+    #figure{margin: 0;}
+    #figure a{width:95%;margin-right: 0;margin-left: 2%;}
+    .row1{display: none;}
+}
+@media(max-width:375px){
+    #figure a{width:98%;margin:3% 1%;}
+    .all{width:83%;}
+    .row1 .row{width: 90%;}
+}
+@media(max-width:360px){
+    #figure a .up .right{display: none;}
+}
+@media(max-width:320px){
+    #figure a{width: 90%;margin: 3% auto;}
+}

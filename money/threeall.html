@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="keywords" content="17988,鄉民財經,財經,台股,股票,期貨,選擇權,海外期貨,金融,賺錢,技術分析,理財,投資,個股,選股,大盤,盤勢" /><meta name="description" content="我們是一個擁有財經知識、專業分析師、影音與軟體的網路學習網站，提供多項線上即時服務，讓使用者自行選擇影音教學、軟體操作或分析師講座，從豐富的線上資料庫，輕鬆入門或進階學習，協助大眾精確而有效率的進修投資理財知識。" />
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/FlexSlider/jquery.flexslider-min.js"></script>
+    <link rel="stylesheet" href="icon/font/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="js/FlexSlider/flexslider.css" type="text/css">
+    <link rel="stylesheet" href="css/1080layout.css" type="text/css">
+    <link rel="stylesheet" href="css/1080index.css" type="text/css">
+    <link rel="stylesheet" href="css/threeall.css" type="text/css">
+    <title>三大法人買賣金額 | 鄉民財經</title>
+</head>
+<body>
+    <header></header>
+    <div id="main">
+        <ul id="breadcrumbs">
+            <li><a href="index.html">首頁</a>></li>
+            <li><a href="stock_in.html">台股</a>></li>
+            <li><a href="javascript:;">法人買賣超</a>></li>
+            <li><a href="threeall.html" class="current">三大法人買賣金額</a></li>
+       </ul>
+        <div class="threeWP">
+           <div class="left">
+               <div class="chart"></div>
+               <div class="l1">
+                                <p>請選擇期間</p>
+                                <select>
+                                    <option value="" style="display: none;">---- ▾</option>
+                                    <option value="5">近5日</option>
+                                    <option value="10">近10日</option>
+                                    <option value="20">近20日</option>
+                                    <option value="40">近40日</option>
+                                </select>
+                                <p>或指定區間</p>
+                                <input id="txtDaysDefine_s" type="text" value="2017/03/30" class="input-text datePicker-input" data-form="datePicker" data-date-format="yyyy/mm/dd" />
+                                <span class="to">~</span>
+                                <input id="txtDaysDefine_e" type="text" value="2017/03/30" class="input-text datePicker-input" data-form="datePicker" data-date-format="yyyy/mm/dd" />
+                                <button class="btn">查詢</button>
+                            </div>
+               <div class="l2">
+                   <div class="row1">
+                        <div class="hd">
+                            <h3>三大法人買賣超 近<span>30</span>日</h3>
+                        </div><!-- hd:end -->
+                        <div class="content">
+                            <table cellpadding="0" cellspacing="0" class="tb rw2n tbhl avgw tb-dhtd">
+                        <tr>
+                            <th>日期</th>
+                            <th>外資</th>
+                            <th>投信</th>
+                            <th>自營</th>
+                            <th>總和</th>
+                        </tr>
+                                    <tr>
+                                        <td >2017-04-12</td>
+                                        <td>28.86</td>
+                                        <td>-6.60</td>
+                                        <td>6.84</td>
+                                        <td class="up">29.10</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-04-11</td>
+                                        <td>-5.30</td>
+                                        <td>-5.95</td>
+                                        <td>-10.65</td>
+                                        <td class="dn">-21.90</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-04-10</td>
+                                        <td>-11.71</td>
+                                        <td>-4.28</td>
+                                        <td>7.73</td>
+                                        <td class="dn">-8.27</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-04-07</td>
+                                        <td>-44.87</td>
+                                        <td>-5.86</td>
+                                        <td>3.74</td>
+                                        <td class="dn">-46.99</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-04-06</td>
+                                        <td>-3.25</td>
+                                        <td>-5.92</td>
+                                        <td>0.56</td>
+                                        <td class="dn">-8.61</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-04-05</td>
+                                        <td>114.64</td>
+                                        <td>-2.58</td>
+                                        <td>24.09</td>
+                                        <td class="up">136.15</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-03-31</td>
+                                        <td>-15.03</td>
+                                        <td>-2.18</td>
+                                        <td>9.82</td>
+                                        <td class="dn">-7.39</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-03-30</td>
+                                        <td>21.96</td>
+                                        <td>1.07</td>
+                                        <td>-1.83</td>
+                                        <td class="up">21.21</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-03-29</td>
+                                        <td>27.81</td>
+                                        <td>2.85</td>
+                                        <td>12.91</td>
+                                        <td class="up">43.57</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-03-28</td>
+                                        <td>121.57</td>
+                                        <td>-7.83</td>
+                                        <td>-19.94</td>
+                                        <td class="up">93.81</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-03-27</td>
+                                        <td>94.66</td>
+                                        <td>-4.85</td>
+                                        <td>-19.61</td>
+                                        <td class="up">70.21</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-03-24</td>
+                                        <td>20.37</td>
+                                        <td>-3.49</td>
+                                        <td>-12.90</td>
+                                        <td class="up">3.98</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-03-23</td>
+                                        <td>38.40</td>
+                                        <td>-2.96</td>
+                                        <td>0.84</td>
+                                        <td class="up">36.28</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-03-22</td>
+                                        <td>7.39</td>
+                                        <td>-5.30</td>
+                                        <td>-11.41</td>
+                                        <td class="dn">-9.31</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-03-21</td>
+                                        <td>159.76</td>
+                                        <td>-1.36</td>
+                                        <td>-5.15</td>
+                                        <td class="up">153.26</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-03-20</td>
+                                        <td>28.36</td>
+                                        <td>1.14</td>
+                                        <td>5.13</td>
+                                        <td class="up">34.63</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-03-17</td>
+                                        <td>135.70</td>
+                                        <td>1.00</td>
+                                        <td>-1.19</td>
+                                        <td class="up">135.51</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-03-16</td>
+                                        <td>125.81</td>
+                                        <td>4.89</td>
+                                        <td>2.69</td>
+                                        <td class="up">133.39</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-03-15</td>
+                                        <td>-2.01</td>
+                                        <td>-2.06</td>
+                                        <td>-1.44</td>
+                                        <td class="dn">-5.51</td>
+                                    </tr>
+                                    <tr>
+                                        <td >2017-03-14</td>
+                                        <td>85.50</td>
+                                        <td>-1.97</td>
+                                        <td>-1.07</td>
+                                        <td class="up">82.46</td>
+                                    </tr>
+                                <tr><td colspan="5" style=" text-align: left;">合計買賣超(億)</td></tr>
+                                <tr>
+                                     <td></td>
+                                     <td>928.62</td>
+                                     <td>-52.24</td>
+                                     <td>-10.84</td>
+                                     <td class="up">865.58</td>
+                                 </tr>
+
+                </table>
+                        </div>
+                   </div>
+                   <div class="row2">
+                        <div class="hd">
+                            <h3>台股期貨未平倉 近<span>30</span>日</h3>
+                        </div><!-- hd:end -->
+                        <div class="content">
+                           <table cellpadding="0" cellspacing="0" class="tb rw2n tbhl avgw">
+                            <tr>
+                                <th>外資</th>
+                                <th>投信</th>
+                                <th>自營</th>
+                                <th>總和</th>
+                            </tr>
+                                        <tr>
+                                            <td>49,919<br><span class="sm">(3319)</span></td>
+                                            <td>-36,501<br><span class="sm">(-63)</span></td>
+                                            <td>-4,016<br><span class="sm">(-2668)</span></td>
+                                            <td class="up">9,402</td>
+                                        </tr>
+                                        <tr>
+                                            <td>46,600<br><span class="sm">(-56)</span></td>
+                                            <td>-36,438<br><span class="sm">(-260)</span></td>
+                                            <td>-1,348<br><span class="sm">(-2652)</span></td>
+                                            <td class="up">8,814</td>
+                                        </tr>
+                                        <tr>
+                                            <td>46,656<br><span class="sm">(1934)</span></td>
+                                            <td>-36,178<br><span class="sm">(88)</span></td>
+                                            <td>1,304<br><span class="sm">(643)</span></td>
+                                            <td class="up">11,782</td>
+                                        </tr>
+                                        <tr>
+                                            <td>44,722<br><span class="sm">(-6098)</span></td>
+                                            <td>-36,266<br><span class="sm">(-921)</span></td>
+                                            <td>661<br><span class="sm">(3163)</span></td>
+                                            <td class="up">9,117</td>
+                                        </tr>
+                                        <tr>
+                                            <td>50,820<br><span class="sm">(-6384)</span></td>
+                                            <td>-35,345<br><span class="sm">(-47)</span></td>
+                                            <td>-2,502<br><span class="sm">(-571)</span></td>
+                                            <td class="up">12,973</td>
+                                        </tr>
+                                        <tr>
+                                            <td>57,204<br><span class="sm">(5171)</span></td>
+                                            <td>-35,298<br><span class="sm">(1380)</span></td>
+                                            <td>-1,931<br><span class="sm">(3143)</span></td>
+                                            <td class="up">19,975</td>
+                                        </tr>
+                                        <tr>
+                                            <td>52,033<br><span class="sm">(-1618)</span></td>
+                                            <td>-36,678<br><span class="sm">(-417)</span></td>
+                                            <td>-5,074<br><span class="sm">(-840)</span></td>
+                                            <td class="up">10,281</td>
+                                        </tr>
+                                        <tr>
+                                            <td>53,651<br><span class="sm">(1900)</span></td>
+                                            <td>-36,261<br><span class="sm">(86)</span></td>
+                                            <td>-4,234<br><span class="sm">(-1379)</span></td>
+                                            <td class="up">13,156</td>
+                                        </tr>
+                                        <tr>
+                                            <td>51,751<br><span class="sm">(-1878)</span></td>
+                                            <td>-36,347<br><span class="sm">(-131)</span></td>
+                                            <td>-2,855<br><span class="sm">(587)</span></td>
+                                            <td class="up">12,549</td>
+                                        </tr>
+                                        <tr>
+                                            <td>53,629<br><span class="sm">(-4025)</span></td>
+                                            <td>-36,216<br><span class="sm">(-226)</span></td>
+                                            <td>-3,442<br><span class="sm">(-299)</span></td>
+                                            <td class="up">13,971</td>
+                                        </tr>
+                                        <tr>
+                                            <td>57,654<br><span class="sm">(4579)</span></td>
+                                            <td>-35,990<br><span class="sm">(-516)</span></td>
+                                            <td>-3,143<br><span class="sm">(-3008)</span></td>
+                                            <td class="up">18,521</td>
+                                        </tr>
+                                        <tr>
+                                            <td>53,075<br><span class="sm">(3284)</span></td>
+                                            <td>-35,474<br><span class="sm">(-82)</span></td>
+                                            <td>-135<br><span class="sm">(-1225)</span></td>
+                                            <td class="up">17,466</td>
+                                        </tr>
+                                        <tr>
+                                            <td>49,791<br><span class="sm">(-3769)</span></td>
+                                            <td>-35,392<br><span class="sm">(-514)</span></td>
+                                            <td>1,090<br><span class="sm">(886)</span></td>
+                                            <td class="up">15,489</td>
+                                        </tr>
+                                        <tr>
+                                            <td>53,560<br><span class="sm">(-2202)</span></td>
+                                            <td>-34,878<br><span class="sm">(-714)</span></td>
+                                            <td>204<br><span class="sm">(78)</span></td>
+                                            <td class="up">18,886</td>
+                                        </tr>
+                                        <tr>
+                                            <td>55,762<br><span class="sm">(-1078)</span></td>
+                                            <td>-34,164<br><span class="sm">(592)</span></td>
+                                            <td>126<br><span class="sm">(1253)</span></td>
+                                            <td class="up">21,724</td>
+                                        </tr>
+                                        <tr>
+                                            <td>56,840<br><span class="sm">(-521)</span></td>
+                                            <td>-34,756<br><span class="sm">(141)</span></td>
+                                            <td>-1,127<br><span class="sm">(1507)</span></td>
+                                            <td class="up">20,957</td>
+                                        </tr>
+                                        <tr>
+                                            <td>57,361<br><span class="sm">(-1016)</span></td>
+                                            <td>-34,897<br><span class="sm">(425)</span></td>
+                                            <td>-2,634<br><span class="sm">(2321)</span></td>
+                                            <td class="up">19,830</td>
+                                        </tr>
+                                        <tr>
+                                            <td>58,377<br><span class="sm">(5354)</span></td>
+                                            <td>-35,322<br><span class="sm">(912)</span></td>
+                                            <td>-4,955<br><span class="sm">(723)</span></td>
+                                            <td class="up">18,100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>53,023<br><span class="sm">(2523)</span></td>
+                                            <td>-36,234<br><span class="sm">(143)</span></td>
+                                            <td>-5,678<br><span class="sm">(-5858)</span></td>
+                                            <td class="up">11,111</td>
+                                        </tr>
+                                        <tr>
+                                            <td>50,500<br><span class="sm">(1372)</span></td>
+                                            <td>-36,377<br><span class="sm">(1263)</span></td>
+                                            <td>180<br><span class="sm">(517)</span></td>
+                                            <td class="up">14,303</td>
+                                        </tr>
+                                    <tr><td colspan="4" style="height:32px; text-align: left;">留倉變化統計(口)</td></tr>
+                                    <tr>
+                                        <td style="height:32px;"><br><span class="sm">(791)</span></td>
+                                        <td><br><span class="sm">(1,139)</span></td>
+                                        <td><br><span class="sm">(-3,679)</span></td>
+                                        <td class="up">298,407</td>
+                                    </tr>
+                    </table>
+                       </div>
+                   </div>    
+                    
+               </div>    
+           </div>
+           <div class="right">
+               <div class="r1">
+                    <div class="hd">
+                        <h3>上市三大法人買賣超</h3>
+                        <p>
+                            <span>2017/04/12</span>
+                            <span>單位：億</span>
+                        </p>
+                    </div><!-- hd:end -->
+                    <table cellspacing="0" cellpadding="0" class="tb rw5n tbhl">
+                            <tr>
+                                <th width="25%">項目</th>
+                                <th width="25%">外資</th>
+                                <th width="25%">投信</th>
+                                <th width="25%">自營商</th>
+                            </tr>
+                            <tr class="">
+                                <td >買進</td>
+                                <td>262.57</td>
+                                <td>6.81</td>
+                                <td>48.67</td>
+                            </tr>
+                            <tr>
+                                <td class=" ">賣出</td>
+                                <td class="">233.71</td>
+                                <td class="">13.41</td>
+                                <td class="">41.82</td>
+                            </tr>
+                            <tr>
+
+                                <td class="">買賣超</td>
+                                <td class="">28.86</td>
+                                <td class="">-6.60</td>
+                                <td class="">6.84</td>
+                            </tr>
+                            <tr class="tal">
+                                <td class="">總計</td>
+                                <td colspan="3" class="t">29.10</td>
+                            </tr>
+                    </table>
+               </div>
+               <div class="r2">
+                    <div class="hd">
+                        <h3>上櫃三大法人買賣超</h3>
+                        <p>
+                            <span>2017/04/12</span>
+                            <span>單位：億</span>
+                        </p>
+                    </div><!-- hd:end -->
+                    <table cellspacing="0" cellpadding="0" class="tb rw5n tbhl">
+                            <tr>
+                                <th width="25%">項目</th>
+                                <th width="25%">外資</th>
+                                <th width="25%">投信</th>
+                                <th width="25%">自營商</th>
+                            </tr>
+                            <tr >
+                                <td class=" r">買進</td>
+                                <td>33.55</td>
+                                <td>2.61</td>
+                                <td>11.67</td>
+                            </tr>
+                            <tr>
+                                <td class=" g">賣出</td>
+                                <td >22.95</td>
+                                <td >6.24</td>
+                                <td >14.79</td>
+                            </tr>
+                            <tr>
+
+                                <td class="">買賣超</td>
+                                <td >10.60</td>
+                                <td >-3.63</td>
+                                <td >-3.12</td>
+                            </tr>
+                            <tr class="tal">
+                                <td class="">總計</td>
+                                <td colspan="3" class="t">3.85</td>
+                            </tr>
+                    </table>
+               </div>
+               <div class="r3">
+                    <div class="hd">
+                        <h3>台股期貨未平倉</h3>
+                        <p>
+                            <span>2017/04/12</span>
+                            <span>單位：口</span>
+                        </p>
+                    </div><!-- hd:end -->
+                   <table cellspacing="0" cellpadding="0" class="tb rw5n tbhl">
+                        <tr>
+                            <th>名稱</th>
+                            <th>外資</th>
+                            <th>投信</th>
+                            <th>自營商</th>
+                        </tr>
+                            <tr>
+                                <td class="">臺股期貨</td>
+                                <td>49,919 </td>
+                                <td>-36,501</td>
+                                <td>-4,016</td>
+                            </tr>
+                            <tr>
+                                <td class="">電子期貨</td>
+                                <td>2,940 </td>
+                                <td>-309</td>
+                                <td>472</td>
+                            </tr>
+                            <tr>
+                                <td class="">金融期貨</td>
+                                <td>-1,073 </td>
+                                <td>-119</td>
+                                <td>-544</td>
+                            </tr>
+                            <tr>
+                                <td class="">小型臺指期貨</td>
+                                <td>-914 </td>
+                                <td>51</td>
+                                <td>-228</td>
+                            </tr>
+                            <tr>
+                                <td class="">非金電期貨</td>
+                                <td>76 </td>
+                                <td>2</td>
+                                <td>-126</td>
+                            </tr>
+                            <tr>
+                                <td class="">股票期貨</td>
+                                <td>14,874 </td>
+                                <td>-6</td>
+                                <td>-69,938</td>
+                            </tr>
+                            <tr>
+                                <td class="">櫃買指數期貨</td>
+                                <td>-70 </td>
+                                <td>9</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td class="">臺灣50期貨</td>
+                                <td>0 </td>
+                                <td>0</td>
+                                <td>-6</td>
+                            </tr>
+                            <tr>
+                                <td class="">總額</td>
+                                <td>64,461 </td>
+                                <td>-38,813</td>
+                                <td>-77,224</td>
+                            </tr>
+                   </table>
+               </div>
+               <div class="r4">  
+                    <div class="hd">
+                        <h1>推薦致富寶</h1>
+                        <span class="more"><a href="richtool.html" target="_blank" class="more">&nbsp;...</a></span>
+                    </div><!-- hd:end -->
+                    <ul class="richtool">
+                            <li>
+                                <a href="" class="app-icon" title="鳴槍起漲強勢股">
+                                    <img src="http://img.wantgoo.com/WantGooFiles/image/ruleicon/4660-20151006043209.jpg" alt="鳴槍起漲強勢股" width="70" height="70" />
+                                    <div>
+                                        <h2>鳴槍起漲強勢股</h2>
+                                        <p>開發：<span>作者名</span></p>
+                                        <p>使用：<span>&nbsp;3896</span></p>
+                                        <p>指標介紹指標介紹指標介紹指標介紹指標介紹指標介紹指標介紹指標介紹指標介紹指標介紹指標介紹</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="app-icon" title="多頭起漲">
+                                    <img src="http://img.wantgoo.com/WantGooFiles/image/ruleicon/4817-20151006033206.jpg" alt="多頭起漲" width="70" height="70" />
+                                    <div>
+                                        <h2>多頭起漲</h2>
+                                        <p>開發：<span>作者名</span></p>
+                                        <p>使用：<span>&nbsp;3208</span></p>
+                                        <p>指標介紹指標介紹指標介紹指標介紹指標介紹指標介紹指標介紹指標介紹指標介紹指標介紹指標介紹</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="app-icon" title="頸上飄選股法">
+                                    <img src="http://img.wantgoo.com/WantGooFiles/image/ruleicon/15367-20160217091939.jpg" alt="頸上飄選股法" width="70" height="70" />
+                                    <div>
+                                        <h2>頸上飄選股法</h2>
+                                        <p>開發：<span>作者名</span></p>
+                                        <p>使用：<span>&nbsp;2169</span></p>
+                                        <p>指標介紹指標介紹指標介紹指標介紹指標介紹指標介紹指標介紹指標介紹指標介紹指標介紹指標介紹</p>
+                                    </div>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+                <div class="r5">
+                    <div class="hd">
+                        <h1>推薦課程</h1>
+                        <span class="more"><a href="forum.html" target="_blank" class="more">&nbsp;...</a></span>
+                    </div><!-- hd:end -->
+                    <div class="class"><a href=""><img src="img/article/1.jpeg" alt=""></a></div>
+                </div>
+           </div>
+       </div>    
+    </div>
+    <footer></footer>
+</body>
+</html>
+
+
+
+
+
+
+
+

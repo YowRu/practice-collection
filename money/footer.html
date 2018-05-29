@@ -1,0 +1,37 @@
+<body>
+<ul id="bottom1">
+    <li>關於我們</li>
+    <li>服務條款＆免責聲明</li>
+    <li>系統來源</li>
+    <li>目前在線人數：<span id="onlinecnt">80800</span></li>
+</ul>
+<ul id="bottom2">
+   <li id="cartInfo"><a href="cart.html">
+       <span>&nbsp;0</span>
+       <i class="flaticon-tool"></i></a>
+   </li><!--購物車-->
+   <li id="backtop"></li>
+   <li id="service"><a href="">線上客服</a></li>
+</ul>
+<div id="bottom3">
+     <span class="COPYRIGHT">© 2016 17988鄉民財經 All Rights Reserved.本網站與所分享之個別有價證券無不當之財務利益關係，本站資料僅供參考，投資人應獨立判斷，審慎評估並自負投資風險</span>  
+</div>
+<script>
+       /*Goto Top*/
+        $(window).scroll(function(){
+        if ( $(this).scrollTop() > 300){ $('#backtop').fadeIn(800); } 
+           else { $('#backtop').stop().fadeOut(500); }
+    });
+    $('#backtop').click(function(){
+        $('html,body').animate({scrollTop:0},1000); });
+    
+      /*購物車資訊*/
+        $('#cartInfo .flaticon-tool').click(function(){
+        document.location.href='cart.html';
+    });
+    
+</script>
+</body>
+
+           
+

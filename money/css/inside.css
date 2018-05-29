@@ -1,0 +1,112 @@
+*{margin:0;padding: 0;}
+#inside{margin-top: 20px; display: flex;}
+#inside .left{width: 20%;color: #444;border-right:1px solid #dadada;background:#f8f8f8;}
+#inside .left .aside{margin-top:40px;box-sizing:border-box;background-color:#fff;}
+#inside .left .aside .nav1  {text-align:left;font-size: 1rem;line-height: 3rem;color: #444;border-bottom: 1px solid #d7dce0;padding-left: 5px;box-sizing: border-box;}
+#inside .left .aside .nav1:first-child{border-top:1px solid #d7dce0;}
+#inside .left .aside .nav1 p{width: 100%; font-size: 1rem;font-weight:bold;color:#444;cursor:pointer;}
+#inside .left .aside .nav1 p:hover{color:#f44336; }
+#inside .left .aside .nav1 p:before{content:'▎ ';font-weight:600;color:#444;}
+#inside .left .aside .nav1 p:hover:before{color:#f44336;}
+#inside .left .aside .nav2 {display:none;width: 100%;}
+#inside .left .aside .nav2 li{margin-left: 2rem;line-height: 1.8rem;}
+#inside .left .aside .nav2 li a{font-size:0.9rem;line-height:1.5rem;color:#444;}
+#inside .left .aside .nav2 li a:before{content:'▪ '; margin-right: 3px;color:#f44336;}
+#inside .left .aside .nav2 li:hover a{color:#f44336;}
+/*========================================section===================================*/
+#inside section{width:80%;}
+#inside section .topinf{width:80%;height:auto; margin:0 auto;display: flex;justify-content: center;}
+/*=================================section====================================*/
+#inside section .topinf #imgTop{width:50%;height:auto;margin:1%;padding:0;display: flex;flex-direction: column;}
+#inside section #text {width:50%;min-height:300px;padding:3%;box-sizing: border-box; margin:1%;background-color:#f8f8f8; }/*名稱價錢等資訊*/
+#imgTop .img1 img { width: 100%;height: auto;display:block;margin: 0 auto;padding:1%;box-sizing: border-box;}  /*內頁主圖*/
+#imgTop .imgwp { width:100%; display: flex;justify-content:center;margin: 0 auto;}  /*內頁小圖*/
+#imgTop .imgwp img{ width:100%;max-width:250px;padding:2%;box-sizing: border-box; }
+#inside section #text span{display: inline-block;font-size:0.7rem;}
+#inside section #text h1, #inside section #text p, #inside section #text a:nth-of-type(1){font-size:0.9rem;color: #707171;margin:1% 0; display:block ;}
+#inside section #text>p:nth-of-type(1),#inside section #text p span{font-size: 0.8rem;color:#707171; }
+#inside section #text .detail{border-top: 2px dotted #838383; margin:10px 0;}
+#inside section #text .detail p:nth-of-type(2){height:80px;text-align:left;overflow-y:scroll;font-size:0.9rem;} 
+#inside section #text h1{font-size:1.3rem;}
+#inside section #text a{color: #fff;font-size: 1.1rem}
+#inside section #text>p:nth-of-type(2){color:#f44336;font-size: 1rem;}
+.button_example{align-self:center;width:auto;margin:20px auto;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;padding:5px;box-sizing:border-box;display:inline-block; text-decoration:none;color:#FFF;background-color:#e34040;cursor:pointer;transition:all 0.5s;font-size:0.9rem;border-top-width: 2px;border-right-width: 2px;border-bottom-width: 2px;border-left-width: 2px;border-top-style: outset;border-right-style: outset;border-bottom-style: outset;border-left-style: outset;border-top-color: buttonface;border-right-color: buttonface;border-bottom-color: buttonface;border-left-color: buttonface;}
+.button_example:hover{font-weight:bold;color: #FFFFFF;background-color:#1B6393;}
+#inside section #text em{font-size:0.5rem;}
+/*商品說明*/
+.downinf li{color: #6c6b6b;padding-bottom: 5px;}
+.downinf{width:90%;height: auto;margin: 0 auto; padding:20px;box-sizing: border-box;}
+.downinf img{min-width:270px;width:100%;max-width: 1280px ;}
+#inside .downinf section{width: 100%;height: auto;padding:20px 10px;margin: 10px 0;background-color:  #f8f8f8;box-sizing: border-box; }
+.downinf section>ul>li:first-child{ border-bottom: 3px dotted  #817575 ;padding-bottom: 5px; margin-bottom: 10px;font-size: 1.3rem;font-weight: bold;}
+.downinf section:nth-of-type(2) p{font-size: 1rem;color:#1B6393;}
+.downinf .note>p{font-size: 1rem;}
+body #inside .downinf ol li, body #inside .downinf section:nth-of-type(2) .list-type li{list-style-type: disc;margin-left: 30px;font-size:0.9rem;}
+body #inside .downinf section:nth-of-type(2)>ul .list-type:first-child {list-style-type: circle;margin-left: 30px;}
+/*商品圖*/
+.productimg { min-width:270px;width:90%; height: auto;margin: 0 auto;text-align: center;}
+.productimg>img{width:70%; margin: 0 auto;}
+@media(max-width:1250px){
+    #inside section .topinf{width:90%;}
+    .downinf{width: 96%;}
+}
+@media(max-width:900px){
+    #inside section .topinf{width:100%;}
+    .downinf{width: 99%;padding: 20px 5px;}
+}
+@media(max-width:881px){
+    .topinf{width:90%;flex-direction: column;justify-content: center;align-items: center;}
+    .downinf{width:95%;}
+    #inside section .topinf #imgTop{width:70%;margin:0 auto;}
+    #imgTop .group>img{padding:1%;box-sizing: border-box;}
+    #inside .left{width:30%;}
+    #inside section{width: 70%;}
+    #inside section #text{width:90%;margin:0;text-align:left;min-height:100px;}
+    #inside section #text h1, #inside section #text>p{font-size: 1.3rem;}
+    #inside section #text h1, #inside section #text p, #inside section #text a:nth-of-type(1)
+    {font-size:1rem;}
+    .downinf{text-align: left;}
+    .downinf section>ul>li:first-child{font-size: 1.4rem;}
+    .downinf section:nth-of-type(2) p{font-size: 1.2rem;}
+                        }
+@media(max-width:791px){.downinf p{font-size:1.4rem;}}
+@media(max-width:750px){.four{display: flex; flex-direction: column;align-items: center;}
+                        .afour{display: flex;width: 100%;}
+                        .five{flex-direction: row;width: 100%;position: relative;}
+}
+@media(max-width:700px){
+    #inside .left{width: 30%;}
+        #inside section{width:70%;}
+    #inside section .topinf #imgTop{width:80%;}
+        #inside{margin-top:10px;}
+}
+@media(max-width:673px){
+                        .downinf section>ul>li:first-child{font-size: 1.2rem;}
+                        .downinf section:nth-of-type(2) p{font-size: 1rem;}
+                        #inside section #text h1, #inside section #text>p, #inside section #text a{font-size: 1.1rem}
+                          }
+@media(max-width:600px){
+    .downinf{padding: 0;}
+    #inside section .topinf #imgTop{width: 90%;}
+    #inside section #text{width: 95%;}
+    
+}
+@media(max-width:555px){ 
+    #inside .left{width: 25%;}
+    #inside section{width:75%;}
+}
+
+ @media(max-width:414px){
+       #inside .left .aside .nav2 li{margin-left:1.2rem;}
+     #inside .left .aside .nav1 p{margin-left: 5px;}
+}
+@media(max-width:407px){#inside .left .aside .nav2{top:37px;}}
+@media(max-width:385px){#inside .left .aside .nav1 p{font-size:14px;}
+                        #inside .left .aside .nav1 i{font-size:14px;}
+                        #inside .left .aside .nav2 li a{font-size:14px;} }
+@media(max-width:375px){
+    #inside .left .aside .nav1 p{margin-left: 0;}
+    #inside .left .aside .nav1{padding-left: 0;}
+    #inside .left .aside .nav1 p:before{content:'▎';margin-right: -5px;margin-left:5px;}
+    #inside .left .aside .nav2 li{margin-left: 0;}
+}

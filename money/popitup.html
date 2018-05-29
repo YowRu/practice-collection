@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>test</title>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/loading.js"></script>
+  <script src="js/FlexSlider/jquery.flexslider-min.js"></script>
+  <script src="js/jquery.bpopup.min.js"></script>
+  <link rel="stylesheet" href="icons/font/flaticon.css" type="text/css">
+  <link rel="stylesheet" href="js/FlexSlider/flexslider.css" type="text/css">
+  <link rel="stylesheet" href="css/1080layout.css" type="text/css">
+  <link rel="stylesheet" href="css/1080index.css" type="text/css">
+</head>
+<style>
+    #element_to_pop_up {width:80%;height: 80%; display:none;border: 1px solid #ddd;background-color:#fff ; padding: 25px;box-sizing: border-box;border-radius: 10px;box-shadow: 0 0 25px 5px #f2f2f2;overflow:visible;}
+    .b-close{border-radius: 7px;box-shadow: none;font: bold 131% sans-serif;padding: 0 6px 2px;box-sizing: border-box;position: absolute; right: -7px; top: -7px;background-color:  #2b91af;color: #fff;cursor: pointer;display: inline-block; text-align: center;}
+</style>
+<body>
+<header></header>
+<div id="main">
+       <button id="my-button">POP IT UP</button>
+       <div id="element_to_pop_up">Content of popup <br>Content of popup <br>Content of popup <br>Content of popup <br> <span class="b-close">Ｘ</span></div> 
+</div>
+<footer></footer> 
+  <script>
+     
+      $('#my-button').bind('click', function(e) { 
+                e.preventDefault();
+                $('#element_to_pop_up').bPopup();
+            });
+      var bPopup = $('element_to_pop_up');
+      bPopup(); 
+      bPopup.close(); 
+  </script> 
+</body>
+</html>

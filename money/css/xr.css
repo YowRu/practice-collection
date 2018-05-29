@@ -1,0 +1,43 @@
+.hd{display: flex;justify-content: space-between;align-items: center; height: 40px;padding: 0 5px;box-sizing: border-box; background: -webkit-linear-gradient(#fdfdfd, #f3f3f3);background: linear-gradient(#fdfdfd, #f3f3f3); border: 1px solid #ddd;border-bottom-color: #bbb;border-radius: 2px;}
+    .hd h1{font-size: 1rem;color: #444;}
+    .hd span{font-size: 13px;color: #555;}
+    .xr_WP table th,.xr_WP table td{width: auto;padding: 3px 7px;box-sizing: border-box;}
+    .xr_WP table td{border-right:1px solid #ddd;border-bottom:1px solid #ddd;}
+    
+    @media(max-width:909px){
+    .xr_WP .content{overflow-x:scroll;}
+    .xr_WP .content table{width: 120%;}
+}
+     @media(max-width:729px){
+    .xr_WP .content{overflow-x:scroll;}
+    .xr_WP .content table{width: 140%;}
+}
+     @media(max-width:627px){
+    .xr_WP .content{overflow-x:scroll;}
+    .xr_WP .content table{width: 160%;}
+}
+     @media(max-width:555px){
+    .xr_WP .content{overflow-x:scroll;}
+    .xr_WP .content table{width: 180%;}
+}
+@media(max-width:500px){#main{margin-top: 40px;}}
+     @media(max-width:485px){
+    .xr_WP .content{overflow-x:scroll;}
+    .xr_WP .content table{width: 200%;}
+}
+     @media(max-width:455px){
+    .xr_WP .content{overflow-x:scroll;}
+    .xr_WP .content table{width: 220%;}
+}
+     @media(max-width:414px){
+    .xr_WP .content{overflow-x:scroll;}
+    .xr_WP .content table{width: 240%;}
+}
+     @media(max-width:363px){
+    .xr_WP .content{overflow-x:scroll;}
+    .xr_WP .content table{width: 260%;}
+}
+     @media(max-width:351px){
+    .xr_WP .content{overflow-x:scroll;}
+    .xr_WP .content table{width: 280%;}
+}

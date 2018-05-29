@@ -1,0 +1,101 @@
+ #main .r1{max-width:1000px;width:100%;position:relative;margin:0 auto;}
+    #main .r1 p{position:absolute;left:25%;bottom:20%;color:#999;}
+    .image1{background:url(../img/psai/calendar3.png) no-repeat center;width:100%;height:700px;margin:0 auto;background-size:contain;}
+    #main .r2{padding:70px 0 40px; }
+    #main .r2 .nav{max-width:1000px;width:100%;margin:20px auto;display:flex;justify-content: center;}
+    #main .r2 .nav a{text-decoration: none;color:#bca8a8;display:inline-block;margin:10px 15px;}
+    .r3,.r5{max-width:1000px;width:100%;margin:20px auto;}
+    .r3 .image4{background:url(../img/psai/posterall.png) no-repeat center top;background-size: contain;
+        width:80%;height:350px;margin:0 auto;}
+    .r3 content{width:100%;display:none;}
+    .r3 content .img1{background:url(../img/psai/brandymelville.png) no-repeat center top;background-size: contain;
+        width:100%;height:350px;}
+    .r3 content .img2{background:url(../img/psai/drink1.png) no-repeat center top;background-size: contain;
+        width:100%;height:350px;}
+    .r3 content .img3{background:url(../img/psai/Banner_Mall.png) no-repeat center top;background-size: contain;
+        width:100%;height:350px;}
+    .r4,.r6{max-width:1000px;width:100%;margin:20px auto;display:flex;justify-content:center;}
+    .r4 .l,.r4 .r{width:30%;text-align: center; }
+    .bg3{height:300px;width:100%;margin-top: -200px;background-color:#e3d8d8;position: relative;z-index: -1;}
+    #main #two{margin-top: -120px;}
+    .r4 .l p,.r4 .r p{color:#bca8a8;width:80%;margin:20px auto;}
+    .image2{background:url(../img/psai/ticket.png) no-repeat center top;width:100%;height:150px;background-size: contain;}
+    .image3{background:url(../img/psai/ticket2.png) no-repeat center top;width:100%;height:150px;background-size: contain;}
+    .image4{background:url(../img/psai/invitie.png) no-repeat center top;width:200px;height:180px;background-size: contain;}
+    .image5{background:url(../img/psai/Card.png) no-repeat center top;width:200px;height:180px;background-size: contain;}
+    .r5 .u,.r5 .d{display:flex;align-items:center;justify-content: center;}
+    .r5 .d.block{display: none;}
+    .r5 .u p,.r5 .d p{width:30%;color: #999;line-height:2rem;margin: 0 25px;}
+    .r6 content{margin:0 5px;}
+    .image6{background:url(../img/psai/1.png) no-repeat center top;width:200px;height:280px;background-size: contain;border:1px solid #ede0e0;}
+    .image7{background:url(../img/psai/donuts.png) no-repeat center top;width:200px;height:280px;background-size: contain;border:1px solid #ede0e0;}
+    .image8{background:url(../img/psai/Poster2.png) no-repeat center top;width:200px;height:280px;background-size: contain;border:1px solid #ede0e0;}
+    
+    #main .b{text-align: center;margin:20px auto;color:transparent;}
+  
+    @media(max-width:900px){
+        #main .r1 p{left: 20%;}
+    }
+    @media(max-width:800px){
+        .r5 .u p, .r5 .d p{width:40%;}
+        .r3 .image4{width: 90%;}
+        #main .r2{padding: 70px 0 0px;}
+    }
+    @media(max-width:750px){
+        #main .r1 p{left:15%;}
+        .r3 .image4{width:98%;}
+        .r6{flex-direction: column;align-items: center;}
+        .r6 content{width:80%;margin:0 auto 20px;}
+        .image6,.image7,.image8{border:0;width:100%;height: 480px;}
+    }
+    @media(max-width:650px){
+       #main {margin-top:60px;}
+        .r3 .image4{display: none;}
+        .r3 content{display: block;margin-bottom: 50px;}
+        .bg3{height:900px;margin-top: -1000px;}
+        #main #two{margin-top: 120px;}
+        .r4 .l, .r4 .r{width: 50%;}
+    }
+    @media(max-width:600px){
+        .image1{height:500px;}
+         #main .r1 p{left:10%;}
+        .r5 .u p, .r5 .d p{width:45%;margin:0 10px;}
+    }
+    @media(max-width:530px){
+        .r4{flex-direction: column;}
+        .r4 .l, .r4 .r{width: 80%;margin:0 auto 50px;}
+    }
+    
+    @media(max-width:500px){
+        .image1{height:400px;}
+         #main .r1 p{left:5%;}
+        .r5 .u p, .r5 .d p{width: 50%;margin:0 5px;}
+    }
+    @media(max-width:450px){
+        .r3 content .img1,.r3 content .img2,.r3 content .img3{height:300px;}
+        .r3 content{margin-bottom:40px;}
+        .bg3{margin-top: -850px;height:750px;}
+    }
+    @media(max-width:414px){
+        .bg3{margin-top: -750px;height:650px;}
+        .r5 .u,.r5 .d.block{width: 90%;margin:0 auto 30px;flex-direction: column;}
+        .r5 .d.block{display:flex;}
+        .r5 .d{display: none;}
+        .r5 .u p, .r5 .d.block p{width: 80%;}
+        .image4,.image5{height:250px;width: 300px;}
+    }
+    @media(max-width:375px){
+        .image1{height:350px;}
+        #main .r1 p{left:25%;position:relative;}
+        .r3 content .img1,.r3 content .img2,.r3 content .img3{height:250px;}
+        .bg3{margin-top: -700px;height:600px;}
+        .image6, .image7, .image8{height:380px;}
+        .r4 .l p, .r4 .r p{width: 90%;}
+    }
+    @media(max-width:350px){
+        .r3 content .img1,.r3 content .img2,.r3 content .img3{height:230px;}
+        .image4, .image5 {height: 230px;width: 250px}
+         .image6, .image7, .image8{height:350px;}
+        .r4 .l p, .r4 .r p{width:100%;}
+        .r5 .u p, .r5 .d.block p{width: 90%;}
+    }

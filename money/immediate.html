@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="keywords" content="17988,鄉民財經,財經,台股,股票,期貨,選擇權,海外期貨,金融,賺錢,技術分析,理財,投資,個股,選股,大盤,盤勢" /><meta name="description" content="我們是一個擁有財經知識、專業分析師、影音與軟體的網路學習網站，提供多項線上即時服務，讓使用者自行選擇影音教學、軟體操作或分析師講座，從豐富的線上資料庫，輕鬆入門或進階學習，協助大眾精確而有效率的進修投資理財知識。" />
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/FlexSlider/jquery.flexslider-min.js"></script>
+    <link rel="stylesheet" href="icon/font/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="js/FlexSlider/flexslider.css" type="text/css">
+    <link rel="stylesheet" href="css/1080layout.css" type="text/css">
+    <link rel="stylesheet" href="css/1080index.css" type="text/css">
+    <title>即時排行 | 鄉民財經</title>
+</head>
+<style>
+    .imWP .tabs{width: 100%; display: flex;justify-content: flex-start;align-items: center;background: -webkit-linear-gradient(#fdfdfd, #f3f3f3);background: linear-gradient(#fdfdfd, #f3f3f3);border-top:1px solid #ddd;border-right:1px solid #ddd;}  
+    .imWP .tabs li .tabsm{width:120px;line-height:32px;position:absolute;top:32px;z-index:1;cursor: pointer;background-color: rgba(0, 0, 0, 0.75);color: #fff;display: none;}
+</style>
+<body>
+    <header></header>
+    <div id="main">
+        <ul id="breadcrumbs">
+            <li><a href="index.html">首頁</a>></li>
+            <li><a href="stock_in.html">台股</a>></li>
+            <li><a href="immediate.html" class="current">即時排行</a></li>
+         </ul>
+         <div class="imWP">
+             <ul class="tabs">
+                   <li><a href="javascript:;">漲跌幅 ▾</a>
+                       <ul class="tabsm">
+                            <li><a href="#tab1">漲幅</a></li>
+                            <li><a href="#tab2">跌幅</a></li>
+                            <li><a href="#tab3">瞬間暴漲</a></li>
+                            <li><a href="#tab4">瞬間暴跌</a></li>
+                            <li><a href="#tab5">週漲幅</a></li>
+                            <li><a href="#tab6">週跌幅</a></li>
+                        </ul> 
+                   </li>
+                   <li><a href="javascript:;">成交量 ▾</a>
+                       <ul class="tabsm">
+                            <li><a href="#tab7">日成交量</a></li>
+                            <li><a href="#tab8">瞬間成交量</a></li>
+                        </ul>
+                   </li>
+                   <li><a href="javascript:;">一般 ▾</a>
+                       <ul class="tabsm">
+                            <li><a href="#tab9">成交價</a></li>
+                            <li><a href="#tab10">震幅</a></li>
+                            <li><a href="#tab11">成交值</a></li>
+                            <li><a href="#tab12">周轉率</a></li>
+                        </ul>
+                   </li>
+                   <li><a href="javascript:;">基本面 ▾</a>
+                       <ul class="tabsm">
+                            <li><a href="#tab13">EPS</a></li>
+                            <li><a href="#tab14">EPS成長率</a></li>
+                            <li><a href="#tab15">營業利益率</a></li>
+                            <li><a href="#tab16">營收月增率</a></li>
+                            <li><a href="#tab17">營收年增率</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#tab18">現金殖利率</a></li>
+               </ul>
+             <ul class="tab_container">
+                   <li id="tab1"  class="tab_content">1</li>
+                   <li id="tab2"  class="tab_content">2</li>
+                   <li id="tab3"  class="tab_content">3</li>
+                   <li id="tab4"  class="tab_content">4</li>
+                   <li id="tab5"  class="tab_content">5</li>
+                   <li id="tab6"  class="tab_content">6</li>
+                   <li id="tab7"  class="tab_content">7</li>
+                   <li id="tab8"  class="tab_content">8</li>
+                   <li id="tab9"  class="tab_content">9</li>
+                   <li id="tab10" class="tab_content">10</li>
+                   <li id="tab11" class="tab_content">11</li>
+                   <li id="tab12" class="tab_content">12</li>
+                   <li id="tab13" class="tab_content">13</li>
+                   <li id="tab14" class="tab_content">14</li>
+                   <li id="tab15" class="tab_content">15</li>
+                   <li id="tab16" class="tab_content">16</li>
+                   <li id="tab17" class="tab_content">17</li>
+                   <li id="tab18" class="tab_content">18</li>
+             </ul>   
+         </div>
+    </div>
+    <footer></footer>
+<script>
+    $(function(){
+		// 預設顯示第一個 Tab
+		var _showTab = 0;
+		$('.imWP').each(function(){
+			// 目前的頁籤區塊
+			var $tab = $(this);
+
+			var $defaultLi = $('.tabs li', $tab).eq(_showTab).addClass('active');
+			$($defaultLi.find('a').attr('href')).siblings().hide();
+			
+			// 當 li 頁籤被點擊時...
+			// 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
+			$('.tabs li', $tab).click(function() {
+				// 找出 li 中的超連結 href(#id)
+				var $this = $(this),
+					_clickTab = $this.find('a').attr('href');
+				// 把目前點擊到的 li 頁籤加上 .active
+				// 並把兄弟元素中有 .active 的都移除 class
+				$this.addClass('active').siblings('.active').removeClass('active');
+				// 淡入相對應的內容並隱藏兄弟元素
+				$(_clickTab).stop(false, true).fadeIn().siblings().hide();
+
+				return false;
+			}).find('a').focus(function(){
+				this.blur();
+			});
+		});
+	});
+</script>    
+</body>
+</html>
