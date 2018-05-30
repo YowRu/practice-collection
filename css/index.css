@@ -31,13 +31,13 @@
 #main .wp .r3bg{background-color:#f2f2f2;height:500px;display:flex;flex-direction: column;justify-content: center;padding-bottom: 20px;}
 #main .wp .r3bg .photo{max-width:800px;margin:0 auto;display:flex;justify-content:center;flex-wrap: wrap;}
 #main .wp .r3bg .photo .image{width:200px;height:200px;overflow:hidden;}
-#main .wp .r3bg .photo .image:nth-of-type(1){background:url(../img/hm/c3.jpg) no-repeat center;background-size: cover;}
+#main .wp .r3bg .photo .image:nth-of-type(1){background:url(../img/hm/f4.jpg) no-repeat center;background-size: cover;}
 #main .wp .r3bg .photo .image:nth-of-type(2){background:url(../img/hm/b13.jpg) no-repeat center;background-size: cover;}
-#main .wp .r3bg .photo .image:nth-of-type(3){background:url(../img/hm/b14.jpg) no-repeat center;background-size: cover;}
+#main .wp .r3bg .photo .image:nth-of-type(3){background:url(../img/hm/b15.jpg) no-repeat center;background-size: cover;}
 #main .wp .r3bg .photo .image:nth-of-type(4){background:url(../img/hm/b2.jpg) no-repeat right top;background-size: cover;}
-#main .wp .r3bg .photo .image:nth-of-type(5){background:url(../img/hm/b4.jpg) no-repeat center;background-size: cover;}
+#main .wp .r3bg .photo .image:nth-of-type(5){background:url(../img/hm/b9.jpg) no-repeat center;background-size: cover;}
 #main .wp .r3bg .photo .image:nth-of-type(6){background:url(../img/hm/b6.jpg) no-repeat center;background-size: cover;}
-#main .wp .r3bg .photo .image:nth-of-type(7){background:url(../img/hm/b20.jpg) no-repeat center;background-size: cover;}
+#main .wp .r3bg .photo .image:nth-of-type(7){background:url(../img/hm/f3.jpg) no-repeat center;background-size: cover;}
 #main .wp .r3bg .photo .image:nth-of-type(8){background:url(../img/hm/f1.jpg) no-repeat center;background-size: cover;}
 #main .wp .r4bg{background-color:#f2f2f2;}
 #main .wp .r5bg{padding-bottom:30px;padding-top: 100px;}
