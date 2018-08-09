@@ -179,6 +179,7 @@ padding: 10px;box-sizing: border-box;}
 @media(max-width:850px){ 
     .part3 .up .writer{width: 130%;}
     .part3 .up{height: 189px;}
+    #ad{height: 120px;}
 }
 @media(max-width:800px){
     #main {margin-top:50px;}
@@ -190,6 +191,7 @@ padding: 10px;box-sizing: border-box;}
     .part3 .down li a .image{margin-right: 0;width: 28%;}
     .part3 .down li a .time{margin: 0 5px 0 15px;}
     .part2 .left .tab_content a p{font-weight:400;}
+     #ad{display: none;}
 }
 @media(max-width:700px){
     .part3 .up .writer{width: 150%;}
