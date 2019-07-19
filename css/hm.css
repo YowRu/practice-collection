@@ -1,7 +1,4 @@
-#main {max-width:1000px;width:100%;margin:0 auto;padding-top:80px;}
+#main {max-width:1000px;width:100%;margin:50px auto 0;}
 .grid{width:100%;overflow:hidden;margin:0 auto;}
 .grid .item {width:200px;background-color:#fff;border: 1px solid #f2f2f2;padding: 4px;overflow:hidden;}
 .grid .item img {display: block;width:100%;border: 1px solid #e0d9d9;}
- @media(max-width:650px){
-     #main {margin-top:60px;}
-}

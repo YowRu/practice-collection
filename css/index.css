@@ -2,24 +2,29 @@
 #main .wp .row1{max-width:1000px;width:100%;margin:0 auto;text-align: center;}
 #main .wp .row1 img{width:700px;}
 #main .wp .row1 p{width:700px;margin:20px auto;line-height:2rem;color:#fff;text-align: center;}
-#main .wp .r1bg{height:520px;background-color:#efdcdb;margin-top:-300px;padding-top:350px;}
+#main .wp .r1bg{height:720px;background-color:#efdcdb;margin-top:-300px;padding-top:350px;}
 #main .wp .r1bg .web{width:700px;margin:10px auto;padding-left:40px;display:flex;justify-content:flex-start;align-items:center;flex-wrap: wrap;}
 #main .wp .r1bg .web a{display:block;width:203.3px;height:200px;margin:10px;text-align:center;color:#fff;text-decoration:none;position:relative;}
-#main .wp .r1bg .web a:nth-of-type(1){background:url(../img/index/strawberry.jpeg) no-repeat center;background-size: cover;}
-#main .wp .r1bg .web a:nth-of-type(2){background:url(../img/index/popular4.jpg) no-repeat center;background-size: cover;}
-#main .wp .r1bg .web a:nth-of-type(3){background:url(../img/index/blog.jpeg) no-repeat center;background-size: cover;}
-#main .wp .r1bg .web a:nth-of-type(4){background:url(../img/web/analysis.jpg) no-repeat center;background-size: cover;}
+#main .wp .r1bg .web a:nth-of-type(1){background:url(../img/index/2.1.jpg) no-repeat center;background-size: cover;}
+#main .wp .r1bg .web a:nth-of-type(2){background:url(../img/index/4.png) no-repeat center;background-size: cover;}
+#main .wp .r1bg .web a:nth-of-type(3){background:url(../img/index/game.png) no-repeat center;background-size: cover;}
+#main .wp .r1bg .web a:nth-of-type(6){background:url(../img/index/1.png) no-repeat center;background-size: cover;}
+#main .wp .r1bg .web a:nth-of-type(4){background:url(../img/index/blog.jpeg) no-repeat center;background-size: cover;}
 #main .wp .r1bg .web a:nth-of-type(5){background:url(../img/index/analytics.png) no-repeat center;background-size: cover;}
+#main .wp .r1bg .web a:nth-of-type(7){background:url(../img/index/78392_1.jpg) no-repeat center;background-size: cover;}
+#main .wp .r1bg .web a:nth-of-type(8){background:url(../img/index/read.png) no-repeat center;background-size: cover;}
 #main .wp .r1bg .web a span{display:inline-block;width:90%;height:80%;margin:10% auto;line-height:170px;color:transparent;}
 #main .wp .r1bg .web a:hover span{color:#fff;border:1px solid #fff;position: relative;z-index: 1;}
 #main .wp .r1bg .web a:before{content:'';display:block;width:100%;height:200px;position:absolute;top:0;left:0;}
 #main .wp .r1bg .web a:hover:before{background-color: rgba(0, 0, 0, 0.72);}
-#main .wp .r1bg h2,#main .wp .r2bg h2,#main .wp .r4bg h2{width:100px;margin:40px auto 10px;background-color:#39363c;color:#fff;font-size:1rem;font-weight:normal;text-align:center;padding:10px 15px;opacity:0.8;}
+#main .wp .r1bg h2,#main .wp .r6bg h2,#main .wp .r2bg h2,#main .wp .r4bg h2{width:100px;margin:30px auto 10px;background-color:#39363c;color:#fff;font-size:1rem;font-weight:normal;text-align:center;padding:10px 15px;opacity:0.8;}
 #main .wp .r2bg h2{background-color:#4b4b4b;}
 #main .wp .r4bg h2{margin-top: 0;}
-#main .wp .r1bg>a,#main .wp .r2bg>a,#main .wp .r4bg>a{display:block;width:100px;margin:0 auto;color:#888;font-size:1rem;text-align: center;padding-bottom:50px;}
+#main .wp .r1bg>a,#main .wp .r6bg .down a,#main .wp .r2bg>a,#main .wp .r4bg>a{display:block;width:100px;margin:0 auto;color:#888;font-size:1rem;text-align: center;padding-bottom:50px;}
+#main .wp .r6bg .down{margin-bottom:-150px;}
+#main .wp .r6bg .down a{padding-bottom:0;}
 #main .wp .r1bg>a:hover,#main .wp .r2bg>a:hover,#main .wp .r4bg>a:hover{color:#c34444;}
-#main .wp .r2bg{padding-top:150px;width:100%;}
+#main .wp .r2bg{padding-top:230px;width:100%;}
 #main .wp .r2bg content{max-width:650px;margin:20px auto;display:flex;justify-content:space-between;}
 #main .wp .r2bg content .image{height:190px;width:205px;overflow:hidden;}
 #main .wp .r2bg content:nth-of-type(1) .image{background:url(../img/psai/BusinessCard.png) no-repeat center;background-size: cover;}
@@ -28,10 +33,20 @@
 #main .wp .r2bg content:nth-of-type(4) .image{background:url(../img/psai/manual.jpg) no-repeat center;background-size: cover;}
 #main .wp .r2bg content p{width:57%;line-height:2rem;color:#999;}
 #main .wp .r2bg content p span{font-size:1rem;display:block;margin-bottom:10px;color:#bca8a8;border-bottom:1px solid #999;padding-bottom: 5px;}
-#main .wp .r3bg{background-color:#f2f2f2;height:500px;display:flex;flex-direction: column;justify-content: center;padding-bottom: 20px;}
+#main .wp .r6bg,#main .wp .r3bg{background-color:#f2f2f2;height:500px;display:flex;flex-direction: column;justify-content: center;padding-bottom: 20px;}
+#main .wp .r6bg{width:700px;height:700px; margin:0 auto;background-color:transparent;position: relative;
+display:flex;flex-direction: column;justify-content: flex-end;align-items: center;}
+
+#main .wp .r6bg img{height:400px;}
+#main .wp .r6bg .left img{height:500px;}
+#main .wp .r6bg .left{position: absolute;bottom:0;left:0;}
+#main .wp .r6bg .right{position: absolute;top:0;right:0;}
+#main .wp .r6bg .m{display: none;}
+#main .wp .r6bg .image{height:190px;width:205px;overflow:hidden;background:url(../img/index/app.png) no-repeat center;background-size: cover;}
+
 #main .wp .r3bg .photo{max-width:800px;margin:0 auto;display:flex;justify-content:center;flex-wrap: wrap;}
 #main .wp .r3bg .photo .image{width:200px;height:200px;overflow:hidden;}
-#main .wp .r3bg .photo .image:nth-of-type(1){background:url(../img/hm/f4.jpg) no-repeat center;background-size: cover;}
+#main .wp .r3bg .photo .image:nth-of-type(1){background:url(../img/hm/b20.jpg) no-repeat center;background-size: cover;}
 #main .wp .r3bg .photo .image:nth-of-type(2){background:url(../img/hm/b13.jpg) no-repeat center;background-size: cover;}
 #main .wp .r3bg .photo .image:nth-of-type(3){background:url(../img/hm/b15.jpg) no-repeat center;background-size: cover;}
 #main .wp .r3bg .photo .image:nth-of-type(4){background:url(../img/hm/b2.jpg) no-repeat right top;background-size: cover;}
@@ -60,7 +75,12 @@
     #main .wp .row1 img,#main .wp .row1 p{width: 600px;}
     #main .wp .r1bg .web{width:90%;padding-left:20px;}
     #main .wp .r1bg .web a{width:45%;}
-    #main .wp .r2bg{padding-top:380px;}
+    #main .wp .r1bg {height: 942px;}
+    #main .wp .r6bg{width:90%;height:470px;}
+    #main .wp .r6bg .left,#main .wp .r6bg .right{display: none;}
+    #main .wp .r6bg .m{display: block;}
+    #main .wp .r2bg {padding-top: 180px;}
+    #main .wp .r1bg .web a span{margin: 8% auto;}
 }
 @media(max-width:630px){
     #main .wp .row1 img,#main .wp .row1 p{width:500px;}
@@ -72,7 +92,9 @@
 }
 @media(max-width:550px){
     #main .wp .row1 img,#main .wp .row1 p{width: 450px;}
-    #main .wp .r1bg .web a,#main .wp .r1bg .web a:before{height:250px;margin-bottom:10px;}
+    #main .wp .r1bg .web a,#main .wp .r1bg .web a:before{height:150px;margin-bottom:10px;}
+    #main .wp .r1bg .web a span {
+        line-height: 170px;height: 150px;}
     #main .wp .r1bg .web a span{line-height:250px;margin:5% auto;height:230px;}
     #main .wp .r2bg content{flex-direction:column;align-items: center;}
     #main .wp .r2bg content .image{width:70%;height:230px;}
@@ -80,6 +102,7 @@
     #main .wp .r2bg{padding-top: 480px;}
     #main .wp .r2bg h2{margin-top: -30px;}
     #main .wp .r3bg{margin-top: 50px;}
+    #main .wp .r1bg {height: 746px;}
 }
 @media(max-width:540px){
    #main .wp .r2bg{padding-top:550px;}
@@ -88,12 +111,18 @@
     #main .wp .row1 p{width: 420px;}
      #main .wp .r1bg .web{padding-left:0;justify-content:center;}
     #main .wp .r1bg .web a{width:80%;margin:2%;}
-    #main .wp .r1bg{height:1020px;}
+    #main .wp .r1bg{height:1420px;}
+    #main .wp .r2bg {padding-top: 150px;}
+    #main .wp .r1bg .web a:nth-of-type(2){background: url(../img/index/4.png) no-repeat center 19%;background-size:cover;}
+    #main .wp .r1bg .web a:nth-of-type(3){background:url(../img/index/game.jpg) no-repeat center 42%;background-size:cover;}
+    #main .wp .r1bg .web a:nth-of-type(5){background:url(../img/index/analytics.png) no-repeat center 61%;background-size:cover;}
+    #main .wp .r1bg .web a:nth-of-type(7){background:url(../img/index/78392_1.jpg) no-repeat center 89%;background-size:cover;}
+    #main .wp .r1bg{margin-top: -361px;}
+    #main .wp .r1bg .web a span {line-height: 110px;height: 112px;}
 }
 @media(max-width:450px){
     #main .wp .row1 img,#main .wp .row1 p{width:370px;}
     #main .wp .r5bg .contact{padding: 70px;}
-        #main .wp .r1bg .web a span{height:220px;}
 
 }
 @media(max-width:400px){
