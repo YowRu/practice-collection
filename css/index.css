@@ -1,7 +1,7 @@
 #main {margin-top:20px;}
 #main .wp .row1{max-width:1000px;width:100%;margin:0 auto;text-align: center;}
 #main .wp .row1 img{width:700px;}
-#main .wp .row1 p{width:700px;margin:20px auto;line-height:2rem;color:#fff;text-align: center;}
+#main .wp .row1 p{width:700px;margin:20px auto;line-height:2rem;color:#666;text-align: center;}
 #main .wp .r1bg{height:720px;background-color:#efdcdb;margin-top:-300px;padding-top:350px;}
 #main .wp .r1bg .web{width:700px;margin:10px auto;padding-left:40px;display:flex;justify-content:flex-start;align-items:center;flex-wrap: wrap;}
 #main .wp .r1bg .web a{display:block;width:203.3px;height:200px;margin:10px;text-align:center;color:#fff;text-decoration:none;position:relative;}
