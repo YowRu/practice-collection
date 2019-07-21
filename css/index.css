@@ -46,7 +46,7 @@ display:flex;flex-direction: column;justify-content: flex-end;align-items: cente
 
 #main .wp .r3bg .photo{max-width:800px;margin:0 auto;display:flex;justify-content:center;flex-wrap: wrap;}
 #main .wp .r3bg .photo .image{width:200px;height:200px;overflow:hidden;}
-#main .wp .r3bg .photo .image:nth-of-type(1){background:url(../img/hm/b20.jpg) no-repeat center;background-size: cover;}
+#main .wp .r3bg .photo .image:nth-of-type(1){background:url(../img/hm/b17.jpg) no-repeat center;background-size: cover;}
 #main .wp .r3bg .photo .image:nth-of-type(2){background:url(../img/hm/b13.jpg) no-repeat center;background-size: cover;}
 #main .wp .r3bg .photo .image:nth-of-type(3){background:url(../img/hm/b15.jpg) no-repeat center;background-size: cover;}
 #main .wp .r3bg .photo .image:nth-of-type(4){background:url(../img/hm/b2.jpg) no-repeat right top;background-size: cover;}
